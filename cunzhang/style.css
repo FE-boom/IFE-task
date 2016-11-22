@@ -1,0 +1,168 @@
+#top{
+	background-color: #333;
+	width: 1282px;
+	height: 60px;
+}
+
+.baidu{
+	height: 37px;
+	width: 202px;
+	padding: 10px 646px 13px 40px;
+	float: left;
+}
+
+.topnav{
+	height: 11px;
+	width: 334px;
+	float: right;
+	padding: 22px 23px 27px;
+
+}
+
+.topnav li{
+	float: left;
+	list-style:disc;
+	width: 72;
+	height: 11px;
+	font-size: 11px;
+
+}
+
+.passage-side{
+	width: 1282px;
+	height: auto;
+}
+
+.first-passage{
+	width: auto;
+	height: auto;
+	border: 21px solid #DEDEDE;
+	padding: 27px 27px 14px 19px;
+}
+
+.h{
+	margin-top: 38px;
+	margin-bottom: 25px;
+}
+
+
+.author{
+	font-size: 13px;
+	color: rgb(173,158,153);
+	margin-top: 	20px;
+	margin-bottom: 	20px;
+}
+
+.p{
+	text-indent: 2em;
+	line-height: 1.85em;
+}
+
+.img{
+	padding-top: 17px;
+	padding-bottom: 13px;
+}
+
+.second-passage{
+	width: auto;
+	height: auto;
+	border-right: 21px solid #DEDEDE;
+	border-bottom: 	21px solid #DEDEDE;
+	border-left: 	21px solid #DEDEDE;	
+	padding: 48px 27px 14px 19px;	
+
+}
+
+.list{
+	list-style: none;
+	line-height: 1.85em;
+	padding-top: 14px;	
+}
+
+.picture{
+	width: 120px;
+	height: 124px;
+	border: 1px solid #DEDEDE;
+	margin-bottom: 16px;
+	margin-left: 61px;
+	text-align: center;
+
+}
+
+.pic{
+	width: 100px;
+	height: 81px;
+	padding-bottom: 10px;
+	
+
+}
+
+.picture p{
+	font-size: 10px;
+}
+
+.rank{
+	line-height: 26px;
+}
+
+.table{
+	border: 1px;
+	width: 1192px;
+	height: 146px;
+
+}
+
+.thead{
+	background-color: #333;
+}
+
+.sum{
+
+	background-color:#ccc ;
+
+}
+
+.form{
+	font-size: 12px;
+	padding-left: 283px;
+	line-height: 22px;
+	
+}
+
+.form p{
+	font-size: 13px;
+	color: rgb(173,158,153);
+	padding-left: 95px;
+
+	
+
+}
+
+.password{
+	margin-bottom: 13px;
+}
+
+.submit{
+	width: 1178px;
+	height: 37px;
+	margin-left: -270px !important;
+	background: #3355d0;
+	border-radius:5%; 
+	color: #fefff5;
+}
+
+.copyright{
+	width: 1282px;
+	height: 70px;
+	background-color:#000; 
+	text-align: center;
+
+
+
+}
+.copyright p{
+	color: #f7f4ef;
+	padding-top: 22px;
+	margin-top:0px; 
+}
+
