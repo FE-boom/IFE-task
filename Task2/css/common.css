@@ -1,0 +1,485 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background:#dedede;
+}
+.public-header{
+	height: 60px;
+	background: #333;
+}
+
+.public-header .header-logo{
+	float: left;
+	margin-top: 10px;
+	margin-left: 40px;
+	width: 117px;
+	height: 37px;
+	background: url("../images/baidu.png");
+
+}
+
+.public-header .header-nav{
+	float: right;
+	font-size: 11px;
+}
+
+.public-header .header-nav .item{
+	padding: 0px 8px 0px;
+	margin-top: 22px;
+	float: left;
+	background:url("../images/header_nav_bg.png") no-repeat left;
+}
+
+
+.public-header .header-nav .item a{
+	color: #eff2f7;
+}
+
+.public-header .header-nav a:link{
+	text-decoration: none;
+}
+
+.public-header .header-nav a:hover{
+	text-decoration: underline;
+}
+
+.index-text{
+
+    width: 1238px;
+    padding: 27px 27px 36px 19px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #CECECE;
+    box-shadow: 2px 2px 0 #CECECE;
+
+}
+
+.index-text .title-one h2{
+	font-size: 22px;
+	color:#080808;
+	height: 45px;
+	line-height: 45px;
+}
+
+.index-text .title-two h3{
+	font-size: 16px;
+	color:#696969;
+	height: 36px;
+}
+
+.index-text .author p{
+	font-size: 12px;
+	color:#a0aeb9;
+	height:27px;
+	line-height:27px;
+}
+
+.index-text .content-one{
+	font-size: 14px;
+	color:#080808;
+	text-indent:2em;
+	line-height: 26px;
+	margin-top: 7px;
+}
+
+.index-text .pic{
+	margin-top: 17px;	
+}
+
+.index-text .content-two{
+	font-size: 14px;
+	color:#080808;
+	line-height: 26px;
+	text-indent:2em;
+	margin-top: 13px;
+}
+
+.index-list{
+    width: 1238px;
+    padding: 27px 27px 36px 19px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #CECECE;
+    box-shadow: 2px 2px 0 #CECECE;
+
+}
+
+.index-list .title-one h2{
+	font-size: 22px;
+	color:#080808;
+	height: 45px;
+	line-height: 45px;
+}
+
+.index-list .title-two h3{
+	font-size: 16px;
+	color:#696969;
+	height: 36px;
+}
+
+.index-list .author p{
+	font-size: 12px;
+	color:#a0aeb9;
+	height:27px;
+	line-height:27px;
+}
+
+.index-list .content-one{
+	font-size: 14px;
+	color:#080808;
+	text-indent:2em;
+	line-height: 26px;
+	margin-top: 7px;
+}
+
+.index-list .pic{
+	margin-top: 17px;
+}
+
+.index-list .project{
+	width: 117px;
+	height: 76px;
+	margin-top: 14px;
+	margin-left: 20px;
+	line-height: 24px;
+}
+
+.index-pic{
+	width: 1238px;
+    padding: 27px 27px 36px 19px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #CECECE;
+    box-shadow: 2px 2px 0 #CECECE;
+}s
+
+.ident-pic h2{
+	font-size: 22px;
+	color:#080808;
+	height: 45px;
+	line-height: 45px;
+}
+
+.index-pic .pic{
+	width: 120px;
+    height: 124px;
+    border: 1px solid #CECECE;
+    margin-top: 12px;
+    margin-left:41px;
+}   
+
+
+.index-pic .pic>p{
+	text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+.index-pic .pic>img{
+	width: 100px;
+    height: 81px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+.index-table{
+	width: 1238px;
+    padding: 27px 20px 20px 19px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #CECECE;
+    box-shadow: 2px 2px 0 #CECECE;
+
+}
+
+.index-table .title-one h2{
+	font-size: 22px;
+	color:#080808;
+	height: 45px;
+	line-height: 45px;
+}
+
+.index-table .title-two h3{
+	font-size: 16px;
+	color:#696969;
+	height: 36px;
+}
+
+.index-table .author p{
+	font-size: 12px;
+	color:#a0aeb9;
+	height:27px;
+	line-height:27px;
+}
+
+.index-table .ranking{
+	font-size: 14px;
+	line-height: 26px;
+	margin-top: 7px;
+	margin-left: 44px;
+}
+
+
+.index-table .tab{
+	margin-top: 14px;
+}
+
+
+.index-table .tab  p{
+	color: #00101a;
+	line-height: 20px;
+	font-weight: bold;
+}
+.index-table .tab table{	
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.index-table .tab table,th,td{
+	border:1px solid #e3e3e3;
+}
+
+.index-table .tab table thead{
+	background-color: #333333;
+	color: #fff;
+	text-align: left;
+}
+
+.index-table .tab table tfoot{
+	background-color: #cccccc;
+	text-align: left;
+}
+
+
+.index-sidebar{
+	width: 1217px;
+    padding:20px 19px 22px 19px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #CECECE;
+    box-shadow: 2px 2px 0 #CECECE;
+}
+
+.index-sidebar .title h2{
+	font-size: 22px;
+	color:#080808;
+	height: 45px;
+	line-height: 45px;
+}
+
+
+.index-sidebar .information .email{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;
+	height: 22px;	
+}
+
+.index-sidebar .information .email .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .email .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .requirement{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;
+	height: 22px;		
+}
+
+.index-sidebar .information .requirement .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .requirement .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .password-one{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;
+	height: 22px;		
+}
+
+.index-sidebar .information .password-one .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .password-one .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .password-two{
+	font-size: 12px;
+	color:#080808;
+	height: 22px;	
+}
+
+
+.index-sidebar .information .password-two .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;	
+}
+
+.index-sidebar .information .password-two .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .sex{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;
+	height: 22px;		
+}
+
+.index-sidebar .information .sex .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .sex .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .city{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;
+	height: 22px;		
+}
+
+.index-sidebar .information .city .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .city .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .hobby{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;	
+	height: 22px;	
+}
+
+.index-sidebar .information .hobby .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .hobby .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .discribe{
+	font-size: 12px;
+	color:#080808;
+	margin-top: 10px;	
+	height: 100px;	
+}
+
+.index-sidebar .information .discribe .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+.index-sidebar .information .discribe .div2{
+	height: 100px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+.index-sidebar .information .submit{
+	height: 38px;
+	width: 100%;
+	background:#3355d0;
+	margin-top: 30px;
+	text-align:center;
+	border-radius: 4px;
+}
+
+.index-sidebar .information .submit input{
+	border:none;
+	height: 38px;
+	color: #fff;
+	font-weight: bold;
+	background:#3355d0;
+}
+
+.footer{
+	height: 70px;
+	background: #000;
+	margin-top: 20px;
+}
+
+.footer p{
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.public-container{
+	position: relative;
+	margin: 0 auto;
+	width: 1238px;
+}
+
+
+        
