@@ -2,9 +2,11 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	background:#dedede;
 }
+
 .public-header{
 	height: 60px;
 	background: #333;
@@ -32,7 +34,6 @@ body{
 	background:url("../images/header_nav_bg.png") no-repeat left;
 }
 
-
 .public-header .header-nav .item a{
 	color: #eff2f7;
 }
@@ -45,7 +46,7 @@ body{
 	text-decoration: underline;
 }
 
-.index-text{
+.article-one{
 
     width: 1238px;
     padding: 27px 27px 36px 19px;
@@ -57,47 +58,39 @@ body{
 
 }
 
-.index-text .title-one h2{
+.article-one h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-.index-text .title-two h3{
+.article-one  h3{
 	font-size: 16px;
 	color:#696969;
 	height: 36px;
 }
 
-.index-text .author p{
+.article-one h4{
 	font-size: 12px;
 	color:#a0aeb9;
 	height:27px;
 	line-height:27px;
 }
 
-.index-text .content-one{
+.article-one p{
 	font-size: 14px;
 	color:#080808;
 	text-indent:2em;
 	line-height: 26px;
-	margin-top: 7px;
+	margin-top: 8px;
 }
 
-.index-text .pic{
+.article-one .pic{
 	margin-top: 17px;	
 }
 
-.index-text .content-two{
-	font-size: 14px;
-	color:#080808;
-	line-height: 26px;
-	text-indent:2em;
-	margin-top: 13px;
-}
-
-.index-list{
+.article-two{
     width: 1238px;
     padding: 27px 27px 36px 19px;
     margin: 0 auto;
@@ -105,30 +98,29 @@ body{
     background: #ffffff;
     border: 1px solid #CECECE;
     box-shadow: 2px 2px 0 #CECECE;
-
 }
 
-.index-list .title-one h2{
+.article-two h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-.index-list .title-two h3{
+.article-two h3{
 	font-size: 16px;
 	color:#696969;
 	height: 36px;
 }
 
-.index-list .author p{
+.article-two h4{
 	font-size: 12px;
 	color:#a0aeb9;
 	height:27px;
 	line-height:27px;
 }
 
-.index-list .content-one{
+.article-two p{
 	font-size: 14px;
 	color:#080808;
 	text-indent:2em;
@@ -136,11 +128,11 @@ body{
 	margin-top: 7px;
 }
 
-.index-list .pic{
+.article-two  .pic{
 	margin-top: 17px;
 }
 
-.index-list .project{
+.article-two  .project{
 	width: 117px;
 	height: 76px;
 	margin-top: 14px;
@@ -148,7 +140,7 @@ body{
 	line-height: 24px;
 }
 
-.index-pic{
+.picture{
 	width: 1238px;
     padding: 27px 27px 36px 19px;
     margin: 0 auto;
@@ -156,39 +148,36 @@ body{
     background: #ffffff;
     border: 1px solid #CECECE;
     box-shadow: 2px 2px 0 #CECECE;
-}s
+}
 
-.ident-pic h2{
+.picture h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-.index-pic .pic{
+.picture .pic{
 	width: 120px;
     height: 124px;
-    border: 1px solid #CECECE;
+    border: 1px solid #CaCaCa;
     margin-top: 12px;
     margin-left:41px;
 }   
 
-
-.index-pic .pic>p{
+.picture .pic p{
+	color: #09000a;
 	text-align: center;
-    position: relative;
-    top: 9px;
-}
+    line-height: 32px;
+ }
 
-.index-pic .pic>img{
+.picture .pic img{
 	width: 100px;
     height: 81px;
-    position: relative;
-    top: 15px;
-    left: 10px;
+    margin-left: 10px;
 }
 
-.index-table{
+.article-three{
 	width: 1238px;
     padding: 27px 20px 20px 19px;
     margin: 0 auto;
@@ -196,69 +185,66 @@ body{
     background: #ffffff;
     border: 1px solid #CECECE;
     box-shadow: 2px 2px 0 #CECECE;
-
 }
 
-.index-table .title-one h2{
+.article-three h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-.index-table .title-two h3{
+.article-three h3{
 	font-size: 16px;
 	color:#696969;
 	height: 36px;
 }
 
-.index-table .author p{
+.article-three h4{
 	font-size: 12px;
 	color:#a0aeb9;
 	height:27px;
 	line-height:27px;
 }
 
-.index-table .ranking{
+.article-three  .ranking{
 	font-size: 14px;
 	line-height: 26px;
 	margin-top: 7px;
 	margin-left: 44px;
 }
 
-
-.index-table .tab{
+.article-three  .tab{
 	margin-top: 14px;
 }
 
-
-.index-table .tab  p{
+.article-three  .tab  p{
 	color: #00101a;
 	line-height: 20px;
 	font-weight: bold;
 }
-.index-table .tab table{	
+
+.article-three .tab table{	
 	border-collapse: collapse;
 	width: 100%;
 }
 
-.index-table .tab table,th,td{
+.article-three .tab table,th,td{
 	border:1px solid #e3e3e3;
 }
 
-.index-table .tab table thead{
+.article-three  .tab table thead{
 	background-color: #333333;
 	color: #fff;
 	text-align: left;
 }
 
-.index-table .tab table tfoot{
+.article-three  .tab table tfoot{
 	background-color: #cccccc;
 	text-align: left;
 }
 
-
-.index-sidebar{
+aside{
 	width: 1217px;
     padding:20px 19px 22px 19px;
     margin: 0 auto;
@@ -268,183 +254,181 @@ body{
     box-shadow: 2px 2px 0 #CECECE;
 }
 
-.index-sidebar .title h2{
+aside h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-
-.index-sidebar .information .email{
+aside.information .email{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;
 	height: 22px;	
 }
 
-.index-sidebar .information .email .div1{
+aside .information .email .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .email .div2{
+aside .information .email .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .requirement{
+aside .information .requirement{
+	font-size: 12px;
+	color:#b7bfc2;
+	margin-top: 10px;
+	height: 22px;		
+}
+
+aside .information .requirement .div1{
+	height: 22px;
+	width: 359px;
+	text-align:right;
+	float:left;
+}
+
+aside .information .requirement .div2{
+	height: 22px;
+	width: 832px;
+	text-align:left;
+	float:right;
+}
+
+aside .information .password-one{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;
 	height: 22px;		
 }
 
-.index-sidebar .information .requirement .div1{
+aside .information .password-one .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .requirement .div2{
+aside .information .password-one .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .password-one{
-	font-size: 12px;
-	color:#080808;
-	margin-top: 10px;
-	height: 22px;		
-}
-
-.index-sidebar .information .password-one .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-.index-sidebar .information .password-one .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-.index-sidebar .information .password-two{
+aside .information .password-two{
 	font-size: 12px;
 	color:#080808;
 	height: 22px;	
 }
 
-
-.index-sidebar .information .password-two .div1{
+aside .information .password-two .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;	
 }
 
-.index-sidebar .information .password-two .div2{
+aside .information .password-two .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .sex{
+aside .information .sex{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;
 	height: 22px;		
 }
 
-.index-sidebar .information .sex .div1{
+aside .information .sex .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .sex .div2{
+aside .information .sex .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .city{
+aside .information .city{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;
 	height: 22px;		
 }
 
-.index-sidebar .information .city .div1{
+aside .information .city .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .city .div2{
+aside .information .city .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .hobby{
+aside .information .hobby{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;	
 	height: 22px;	
 }
 
-.index-sidebar .information .hobby .div1{
+aside .information .hobby .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .hobby .div2{
+aside .information .hobby .div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .discribe{
+aside .information .discribe{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;	
 	height: 100px;	
 }
 
-.index-sidebar .information .discribe .div1{
+aside .information .discribe .div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-.index-sidebar .information .discribe .div2{
+aside .information .discribe .div2{
 	height: 100px;
 	width: 832px;
 	text-align:left;
 	float:right;
 }
 
-.index-sidebar .information .submit{
+aside .information .submit{
 	height: 38px;
 	width: 100%;
 	background:#3355d0;
@@ -453,7 +437,7 @@ body{
 	border-radius: 4px;
 }
 
-.index-sidebar .information .submit input{
+aside .information .submit input{
 	border:none;
 	height: 38px;
 	color: #fff;
@@ -461,13 +445,13 @@ body{
 	background:#3355d0;
 }
 
-.footer{
+footer{
 	height: 70px;
 	background: #000;
 	margin-top: 20px;
 }
 
-.footer p{
+footer p{
 	color: #fff;
 	font-family: Arial;
 	font-size: 12px;
