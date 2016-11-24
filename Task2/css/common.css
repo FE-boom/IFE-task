@@ -46,8 +46,7 @@ body{
 	text-decoration: underline;
 }
 
-.article-one{
-
+.article-one,.article-two,.picture,.article-three{
     width: 1238px;
     padding: 27px 27px 36px 19px;
     margin: 0 auto;
@@ -55,30 +54,29 @@ body{
     background: #ffffff;
     border: 1px solid #CECECE;
     box-shadow: 2px 2px 0 #CECECE;
-
 }
 
-.article-one h2{
+h2{
 	font-size: 22px;
 	color:#080808;
 	height: 45px;
 	line-height: 45px;
 }
 
-.article-one  h3{
+h3{
 	font-size: 16px;
 	color:#696969;
 	height: 36px;
 }
 
-.article-one h4{
+h4{
 	font-size: 12px;
 	color:#a0aeb9;
 	height:27px;
 	line-height:27px;
 }
 
-.article-one p{
+.article-one p,.article-two p{
 	font-size: 14px;
 	color:#080808;
 	text-indent:2em;
@@ -86,50 +84,8 @@ body{
 	margin-top: 8px;
 }
 
-.article-one .pic{
+.article-one .pic,.article-two  .pic{
 	margin-top: 17px;	
-}
-
-.article-two{
-    width: 1238px;
-    padding: 27px 27px 36px 19px;
-    margin: 0 auto;
-    margin-top: 20px;
-    background: #ffffff;
-    border: 1px solid #CECECE;
-    box-shadow: 2px 2px 0 #CECECE;
-}
-
-.article-two h2{
-	font-size: 22px;
-	color:#080808;
-	height: 45px;
-	line-height: 45px;
-}
-
-.article-two h3{
-	font-size: 16px;
-	color:#696969;
-	height: 36px;
-}
-
-.article-two h4{
-	font-size: 12px;
-	color:#a0aeb9;
-	height:27px;
-	line-height:27px;
-}
-
-.article-two p{
-	font-size: 14px;
-	color:#080808;
-	text-indent:2em;
-	line-height: 26px;
-	margin-top: 7px;
-}
-
-.article-two  .pic{
-	margin-top: 17px;
 }
 
 .article-two  .project{
@@ -138,23 +94,6 @@ body{
 	margin-top: 14px;
 	margin-left: 20px;
 	line-height: 24px;
-}
-
-.picture{
-	width: 1238px;
-    padding: 27px 27px 36px 19px;
-    margin: 0 auto;
-    margin-top: 20px;
-    background: #ffffff;
-    border: 1px solid #CECECE;
-    box-shadow: 2px 2px 0 #CECECE;
-}
-
-.picture h2{
-	font-size: 22px;
-	color:#080808;
-	height: 45px;
-	line-height: 45px;
 }
 
 .picture .pic{
@@ -175,36 +114,6 @@ body{
 	width: 100px;
     height: 81px;
     margin-left: 10px;
-}
-
-.article-three{
-	width: 1238px;
-    padding: 27px 20px 20px 19px;
-    margin: 0 auto;
-    margin-top: 20px;
-    background: #ffffff;
-    border: 1px solid #CECECE;
-    box-shadow: 2px 2px 0 #CECECE;
-}
-
-.article-three h2{
-	font-size: 22px;
-	color:#080808;
-	height: 45px;
-	line-height: 45px;
-}
-
-.article-three h3{
-	font-size: 16px;
-	color:#696969;
-	height: 36px;
-}
-
-.article-three h4{
-	font-size: 12px;
-	color:#a0aeb9;
-	height:27px;
-	line-height:27px;
 }
 
 .article-three  .ranking{
@@ -254,153 +163,28 @@ aside{
     box-shadow: 2px 2px 0 #CECECE;
 }
 
-aside h2{
-	font-size: 22px;
-	color:#080808;
-	height: 45px;
-	line-height: 45px;
-}
-
-aside.information .email{
+.email,.password-one,.password-two,.sex,.city,.hobby,.discribe{
 	font-size: 12px;
 	color:#080808;
 	margin-top: 10px;
 	height: 22px;	
 }
 
-aside .information .email .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .email .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .requirement{
+.requirement{
 	font-size: 12px;
-	color:#b7bfc2;
+	color:#a0aeb9;
 	margin-top: 10px;
-	height: 22px;		
+	height: 22px;
 }
 
-aside .information .requirement .div1{
+.div1{
 	height: 22px;
 	width: 359px;
 	text-align:right;
 	float:left;
 }
 
-aside .information .requirement .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .password-one{
-	font-size: 12px;
-	color:#080808;
-	margin-top: 10px;
-	height: 22px;		
-}
-
-aside .information .password-one .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .password-one .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .password-two{
-	font-size: 12px;
-	color:#080808;
-	height: 22px;	
-}
-
-aside .information .password-two .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;	
-}
-
-aside .information .password-two .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .sex{
-	font-size: 12px;
-	color:#080808;
-	margin-top: 10px;
-	height: 22px;		
-}
-
-aside .information .sex .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .sex .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .city{
-	font-size: 12px;
-	color:#080808;
-	margin-top: 10px;
-	height: 22px;		
-}
-
-aside .information .city .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .city .div2{
-	height: 22px;
-	width: 832px;
-	text-align:left;
-	float:right;
-}
-
-aside .information .hobby{
-	font-size: 12px;
-	color:#080808;
-	margin-top: 10px;	
-	height: 22px;	
-}
-
-aside .information .hobby .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .hobby .div2{
+.div2{
 	height: 22px;
 	width: 832px;
 	text-align:left;
@@ -412,20 +196,6 @@ aside .information .discribe{
 	color:#080808;
 	margin-top: 10px;	
 	height: 100px;	
-}
-
-aside .information .discribe .div1{
-	height: 22px;
-	width: 359px;
-	text-align:right;
-	float:left;
-}
-
-aside .information .discribe .div2{
-	height: 100px;
-	width: 832px;
-	text-align:left;
-	float:right;
 }
 
 aside .information .submit{
