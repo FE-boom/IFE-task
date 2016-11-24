@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+			box-sizing:border-box;
+	
+}
+
+#main{
+	position: relative;
+	background-color: #eee;
+	border: 1px solid #999;
+	
+
+}
+ .left{
+ 	padding: 20px;
+ 	border: 1px solid #999;
+ 	width: 200px;
+ 	background-color: #fefff5;
+ 	position: absolute;
+ 	left: 20px;
+ 	top: 20px;
+
+ }
+
+ .teamlogo{
+ 	border: 1px solid #999;
+ 	width: 80px;
+ 	height: 80px;
+ 	padding-top:20px;
+ 	padding-left:20px;
+ 	background-color:#999;
+ 	text-align: center;
+ 	float: left;
+ }
+
+ .teamname{
+ 	float: right;
+ 	text-align: center;
+ 	
+ }
+
+ .middle{
+ 	border: 1px solid #999;
+ 	margin: 20px 160px 20px 240px;
+ 	padding: 20px;
+ 	background: #fefff5;
+ 		
+ }
+
+ .right{
+ 	border: 1px solid #999;
+ 	background-color: #fefff5;
+ 	width: 120px;
+ 	height: auto;
+ 	position: absolute;
+ 	right: 20px;
+ 	top: 20px;
+
+ }
+
+ .logo{
+ 	width: 80px;
+ 	height: 80px;
+ 	margin: 20px;
+ 	background-color: #999;
+ 	text-align: center;
+ }
