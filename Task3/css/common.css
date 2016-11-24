@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+section {
+	margin: 20px;
+	padding: 20px 20px 40px;
+	background: #eee;
+	border:1px solid #999;
+	position: relative;
+}
+
+section .team{
+	width: 200px;
+	padding: 20px;
+	background: #fff;
+	position: absolute;
+	left: 0px; top :0px;
+	border:1px solid #999;
+	margin: 20px;
+}
+
+section .team .logo,section aside .one,section aside .two{
+	width: 80px;
+	height: 80px;
+	float: left;
+	background: #eee;
+	border:1px solid #999;
+    display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+}
+
+section .team p{
+	
+	text-align: center;
+}
+
+section article{
+	background: #fff;
+	margin: 0 140px 0 220px;
+	padding: 20px;
+	border: 1px solid #999;
+}
+
+section  aside{
+	width: 120px;
+	padding: 20px;
+	background: #fff;
+	position:absolute;
+	right:0px;top: 0px; 
+	border: 1px solid #999;	
+	margin: 20px;
+}
+
+section aside .one{
+	margin-bottom: 20px;
+}
+
+section aside div p{
+	text-align: center;
+}
+
+body {
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width:400px){
+	.team{display: inline;}
+	article{display: inline;}
+	aside{display: inline;position: relative;}
+}
