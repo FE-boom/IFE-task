@@ -2,7 +2,141 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>�����ҵĵ�һ����ҳ</title>
+        <title>学习HTML</title>
     </head>
 	<body>
-	
+	    <div>
+		    <h1>网站一级标题</h1>
+		    <ul>
+		        <li><a href="#">导航链接一</a></li>
+	            <li><a href="#">导航链接二</a></li>
+		        <li><a href="#">导航链接三</a></li>
+		        <li><a href="#">导航链接四</a></li>
+		    </ul>
+		</div>
+		<div>
+		    <h2>文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p>文章作者&nbsp文章发表时间</p>
+			<p>23333333333333333333333333333333333333,换行了<br />233333333333333333333333333,换行了<br />23333333333333333，<a href="http://www.bilibili.com">这里有一个链接链接到http://www.bilibili.com</a>，23333333333333333333333333，<strong>这里有个粗体字</strong>，33333333333333333333333333</p>
+			<img src="1.jpg">
+			<p>23333333333333333333333，换行了<br />2333333333333333333333333333，<strong>这里有个粗体字</strong>，2333333333333333333333333<a href="http://www.bilibili.com">这里有一个链接链接到http://www.bilibili.com</a>23333333333333333333333333333333</p>
+		</div>
+		<div>
+			<h2>另一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p>文章作者&nbsp文章发表时间</p>
+			<p>23333333333333333333333333333333333333,换行了<br />233333333333333333333333333,换行了<br />23333333333333333，<a href="http://www.bilibili.com">这里有一个链接链接到http://www.bilibili.com</a>，23333333333333333333333333，<strong>这里有个粗体字</strong>，33333333333333333333333333</p>
+			<img src="1.jpg">
+			<ul>
+				<li>列表项目一</li>
+				<li>列表项目二</li>
+				<li>列表项目三</li>
+			</ul>
+		</div>
+		<div>
+			<h3>图片</h3>
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+			<p>丑陋</P>
+			<img src="1.jpg"><br />
+		</div>
+		<div>
+			<h2>最后一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p>文章作者&nbsp文章发表时间</p>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+			<p>下面是一个表格，给表格加了个border="1"好让你看出是一个表格</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>表头</th>
+						<th>表头</th>
+						<th>表头</th>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="#">表内容单元格</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="#">表内容单元格</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="#">表内容单元格</a></td>
+					</tr>
+					<tr>
+						<td>表内容单元格</td>
+						<td>表内容单元格</td>
+						<td><a href="#">表内容单元格</a></td>
+					</tr>
+					<tr>
+						<td>总计</td>
+						<td>1000</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h2>这里以后已是个侧栏，这是侧栏的标题</h2>
+			<h3>侧栏注册窗口标题</h3>
+			<form action="save.php" method="post">
+				<lable for="1">请输入邮箱地址：</lable>
+				<input type="email" id="1" placeholder="这是一个文本输入框" />
+				<br />
+				<lable>邮箱地址请按要求输入</lable>
+				<br />
+				<lable for="2">请输入密码：</lable>
+				<input type="password" id="2" placeholder="这是一个密码输入框" />
+				<lable for="3">请重复输入密码：</lable>
+				<input type="password" id="3" placeholder="这是一个密码输入框" />
+				<br />
+				<lable>密码请为6-16位英文数字</lable>
+				<br />
+				<lable>性别：</lable>
+				<lable for="4">男</lable>
+				<input type="ratio" value="1" name="gender" id="4" />
+				<lable for="5">女</lable>
+				<input type="ratio" value="2" name="gender" id="5" />
+				<lable>城市：</lable>
+				<select>
+					<option value="帝都" selected="selected">帝都</option>
+					<option value="魔都">魔都</option>
+					<option value="妖都">妖都</option>
+				</select>
+				<lable>爱好：</lable>
+				<input type="checkbox" name="运动" id="6" />
+				<lable for="6">运动</lable>
+				<input type="checkbox" name="艺术" id="7" />
+				<lable for="7">艺术</lable>
+				<input type="checkbox" name="科学" id="8" />
+				<lable for="6">科学</lable>
+				<lable>个人描述：</lable>
+				<textarea rows="2" cols="12">这是一个多行输入框，输入您的个人描述</textarea>
+				<input type="submit" value="确认提交" />
+			</form>
+		</div>
+		<div>
+		<p>版权所有©</p>
+		</div>
+	<body>
+</html>
