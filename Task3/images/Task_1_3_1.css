@@ -1,0 +1,84 @@
+body{
+	background-color: #ffffff;
+}
+figure p body{
+	padding: 0;
+	border:0;
+	margin:0;
+}
+.content{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border:1px solid #000;
+	background-color: #eee;
+	/*overflow: auto;*/
+}
+.content .team{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 200px;
+	height: 120px;
+	border:1px solid #999;
+	display: inline;
+}
+.content .team img{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 80px;
+	height: 80px;
+	border:1px #999 solid;
+}
+.content .team p{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 120px;
+	font-family: Arial ;
+}
+.content .introduce{
+	float: left;
+	
+	margin-left: 240px;
+}
+.content .introduce .article{	
+	margin-right: 160px;
+	background-color: #fff;
+	width: auto;
+}
+.content .introduce .article p{
+	margin-left: 20px;
+}
+.content .introduce .title-p{
+	line-height: 24px;
+	margin-top: 12px;
+	margin-left: 20px;
+}
+.content  .introduce .article-2{
+	width: 120px;
+	background-color: #fff;
+	float: right;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.content .introduce .article-2 figure{
+	width: 80px;
+	height: auto;
+	margin: 20px;
+}
+.content .introduce .article-2 figure img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+.clearfix:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.clearfix{
+	*zoom:1;
+}
