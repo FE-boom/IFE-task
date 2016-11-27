@@ -1,0 +1,27 @@
+body,div,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+	margin: 0;
+	padding: 0;
+}
+
+ ul li { 
+list-style-type: none; 
+} 
+
+
+
+img{
+	border:none;
+	display: block;
+}
+
+.clearflooat{
+	zoom:1;
+}
+
+.clearfloat:after{
+	display: block;
+	clear: both;
+	content:"";
+	visibility: hidden;
+	height: 0;
+}
