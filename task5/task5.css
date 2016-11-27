@@ -1,0 +1,195 @@
+body,p,img,h1,h2,h3{
+	padding: 0;
+	margin: 0;
+}
+#top{
+	background-color: #333;
+	width: 100%;
+	height: 60px;
+}
+#bg{
+	background: #DEDEDE;
+	height: 100%;
+	width: 100%;
+}
+
+.baidu{
+	height: 37px;
+	width: 202px;
+	padding: 10px 646px 13px 40px;
+	float: left;
+}
+
+.topnav{
+	height: 11px;
+	width: 334px;
+	float: right;
+	padding: 22px 23px 27px;
+
+}
+
+.topnav li{
+	float: left;
+	list-style:disc;
+	width: 72px;
+	height: 11px;
+	font-size: 11px;
+
+}
+
+.passage{
+	background: #fff;
+	margin: 20px;
+	padding: 21px;
+	height: auto;
+
+}
+
+.h{
+	margin-top: 38px;
+	margin-bottom: 25px;
+}
+
+
+.author{
+	font-size: 13px;
+	color: rgb(173,158,153);
+	margin-top: 	20px;
+	margin-bottom: 	20px;
+}
+
+.p{
+	text-indent: 2em;
+	line-height: 1.85em;
+}
+
+.img{
+	padding-top: 17px;
+	padding-bottom: 13px;
+	display: block;
+}
+
+.list{
+	list-style: none;
+	line-height: 1.85em;
+	padding-top: 14px;	
+}
+
+.picture{
+	width: 120px;
+	height: 124px;
+	border: 1px solid #DEDEDE;
+	margin-bottom: 16px;
+	margin-left: 61px;
+	text-align: center;
+	float: left;
+
+}
+
+.pic{
+	width: 100px;
+	height: 81px;
+	padding-bottom: 10px;
+	
+
+}
+
+.picture p{
+	font-size: 10px;
+}
+
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+.rank{
+	line-height: 26px;
+}
+
+.table{
+	border: 1px;
+	width: 100%;
+	height: 146px;
+
+}
+
+.thead{
+	background-color: #333;
+}
+
+.sum{
+
+	background-color:#ccc ;
+
+}
+
+.form{
+	font-size: 12px;
+	/*padding-left: 283px;*/
+	line-height: 22px;
+	
+}
+
+.form p{
+	font-size: 13px;
+	color: rgb(173,158,153);
+	padding-left: 95px;
+
+	
+
+}
+
+.password{
+	margin-bottom: 13px;
+}
+
+.submit{
+	width: 321px;
+	height: 40px;
+	background: #3355d0;
+	border-radius:10px; 
+	color: #fefff5;
+	margin: 21px;
+
+}
+.copyright{
+	width: 100%;
+	height: 70px;
+	background-color:#000; 
+	text-align: center;
+
+
+
+}
+.copyright p{
+	color: #f7f4ef;
+	padding-top: 22px;
+	margin-top:0px; 
+}
+
+.side{
+	position: absolute;
+	top: 61px;
+	right: 0px;
+	width: 344px;
+	height: 496px;
+	background: #fff;
+	/*margin: 21px;*/
+	margin-top: 21px;
+	margin-right: 21px;
+
+	padding: 21px;
+
+}
+
+#left-passage{
+	margin-right: 407px;
+
+
+}
