@@ -1,0 +1,41 @@
+body{
+	padding: 0;
+	margin:0;
+	width: 1280px;
+	margin:0 auto;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+ul li {
+	text-decoration: none;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+h2 ,p,img,ul,h1,a,span,input,dd,dt,dl,li{
+	padding:0;
+	margin:0;
+}
+input{
+	background: none;
+	padding: 0;
+	border:0;
+}
+select{
+	background:transparent;
+	border:none;
+}
+.cleanfix{
+	*zoom:1;
+}
+.cleanfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
