@@ -1,0 +1,75 @@
+body div{
+	padding: 0px;
+	margin: 0px;
+}
+input{
+	border: none;
+}
+.title{
+	margin-top: 24px;
+	margin-left: 24px;
+}
+strong{
+	font-family: "微软雅黑";
+	font-size: 26px;
+}
+#set-button{
+	width: 100px;
+	height: 40px;
+	background: red;
+}
+#box{
+	width: 100px;
+	height: 100px;
+	border: 4px solid black;
+	margin-top: 29px;
+}
+#set-style{
+	width: 213px;
+	height: 142px;
+	border: 14px solid #9c949c;
+	text-align: center;
+	font-size: 12px;
+	padding-top: 16px;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	margin: -78px 0 0 -113px;
+}
+.set{
+	widows: 44px;
+	height: 23px;
+	background: #002952;
+	margin-top: 9px;
+	color: #dee3e9;
+}
+#red{
+	width: 28px;
+	height: 24px;
+	background: green;
+	margin-bottom: 6px;
+
+}
+.Fil{
+	filter:alpha(opacity:60);
+	opacity:0.6;
+}
+#yellow{
+	width: 28px;
+	height: 24px;
+	background: yellow;
+	
+}
+#blue{
+	width: 28px;
+	height: 24px;
+	background: blue;
+}
+.w-h input{
+	width: 28px;
+	height: 24px;
+	margin-bottom: 6px;
+	filter:alpha(opacity:60);
+	opacity:0.6;
+}

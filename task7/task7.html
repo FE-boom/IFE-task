@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task7</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="task7.css">
+	<script type="text/javascript">
+	window.onload=function(){
+		var oSetbutton=document.getElementById('set-button');
+		var oSetstyle=document.getElementById('set-style');
+		var oSetred=document.getElementById("red");
+		var oSetyellow=document.getElementById("yellow");
+		var oSetblue=document.getElementById("blue");
+		var oDiv=document.getElementById('box');
+		var oWidth200=document.getElementById('width200');
+		var oWidth300=document.getElementById('width300');
+		var oWidth400=document.getElementById('width400');
+		var oHeig200=document.getElementById('heigh200');
+		var oHeig300=document.getElementById('heigh300');
+		var oHeig400=document.getElementById('heigh400');
+		var oReset=document.getElementById('reset');
+		var oSure=document.getElementById('sure');
+		oSetbutton.onclick=function (){
+			oSetstyle.style.display='block';
+		};
+		oSetred.onclick=function(){
+			oDiv.style.background='red';
+		};
+		oSetred.onmouseover=function(){
+			oSetred.style.background='red';
+			oSetred.style.filter='alpha(opacity:100)';
+			oSetred.style.opacity=1;
+		};
+		oSetred.onmouseout=function(){
+			oSetred.style.background='green';
+		};
+		oSetyellow.onclick=function(){
+			oDiv.style.background='yellow';
+		};
+		oSetyellow.onmouseover=function	(){
+			oSetyellow.style.filter='alpha(opacity:100)';
+			oSetyellow.style.opacity=1;
+		};
+		oSetyellow.onmouseout=function(){
+			oSetyellow.style.filter='alpha(opacity:60)';
+			oSetyellow.style.opacity=0.6;
+		};
+		oSetblue.onclick=function(){
+			oDiv.style.background='blue';
+		};
+		oSetblue.onmouseover=function(){
+			oSetblue.style.filter='alpha(opacity:100)';
+			oSetblue.style.opacity=1;
+		};
+		oSetblue.onmouseout=function(){
+			oSetblue.style.filter='alpha(opacity:60)';
+			oSetblue.style.opacity=0.6;
+		};
+		oWidth200.onclick=function(){
+			oDiv.style.width='200px';
+		};
+		oWidth200.onmouseover=function(){
+			oWidth200.style.background='#e8b570';
+			oWidth200.style.filter='alpha(opacity:100)';
+			oWidth200.style.opacity=1;
+		};
+		oWidth200.onmouseout=function(){
+			oWidth200.style.background='#efefef';
+			oWidth200.style.filter='alpha(opacity:60)';
+			oWidth200.style.opacity=0.6;
+		};
+		oWidth300.onclick=function(){
+			oDiv.style.width='300px';
+		};
+		oWidth300.onmouseover=function(){
+			oWidth300.style.background='#e8b570';
+			oWidth300.style.filter='alpha(opacity:100)';
+			oWidth300.style.opacity=1;
+		};
+		oWidth300.onmouseout=function(){
+			oWidth300.style.background='#efefef';
+			oWidth300.style.filter='alpha(opacity:60)';
+			oWidth300.style.opacity=0.6;
+		};
+		oWidth400.onclick=function(){
+			oDiv.style.width='400px';
+		};
+		oWidth400.onmouseover=function(){
+			oWidth400.style.background='#e8b570';
+			oWidth400.style.filter='alpha(opacity:100)';
+			oWidth400.style.opacity=1;
+		};
+		oWidth400.onmouseout=function(){
+			oWidth400.style.background='#efefef';
+			oWidth400.style.filter='alpha(opacity:60)';
+			oWidth400.style.opacity=0.6;
+		};
+		oHeig200.onclick=function(){
+			oDiv.style.height='200px';
+		};
+		oHeig200.onmouseover=function(){
+			oHeig200.style.background='#e8b570';
+			oHeig200.style.filter='alpha(opacity:100)';
+			oHeig200.style.opacity=1;
+		};
+		oHeig200.onmouseout=function(){
+			oHeig200.style.background='#efefef';
+			oHeig200.style.filter='alpha(opacity:60)';
+			oHeig200.style.opacity=0.6;
+		};
+		oHeig300.onclick=function(){
+			oDiv.style.height='300px';
+		};
+		oHeig300.onmouseover=function(){
+			oHeig300.style.background='#e8b570';
+			oHeig300.style.filter='alpha(opacity:100)';
+			oHeig300.style.opacity=1;
+		};
+		oHeig300.onmouseout=function(){
+			oHeig300.style.background='#efefef';
+			oHeig300.style.filter='alpha(opacity:60)';
+			oHeig300.style.opacity=0.6;
+		};
+		oHeig400.onclick=function(){
+			oDiv.style.height='400px';
+		};
+		oHeig400.onmouseover=function(){
+			oHeig400.style.background='#e8b570';
+			oHeig400.style.filter='alpha(opacity:100)';
+			oHeig400.style.opacity=1;
+		};
+		oHeig400.onmouseout=function(){
+			oHeig400.style.background='#efefef';
+			oHeig400.style.filter='alpha(opacity:60)';
+			oHeig400.style.opacity=0.6;
+		};
+		oReset.onclick=function(){
+			oDiv.style.width='100px';
+			oDiv.style.height='100px';
+			oDiv.style.background='#fff';
+		};
+		oSure.onclick=function(){
+			oSetstyle.style.display='none';
+		};
+
+	};
+
+	</script>
+</head>
+<body>
+	<div class="title">
+		<strong>请为下面的DIV设置样式：</strong>
+		<input id="set-button" type="button" name="set" value="点击设置">
+		<div id="box">
+		</div>
+	</div>
+	<div id="set-style">
+		<div>
+			请选择背景色:
+			<input id="red" class="Fil" type="button" name="background" value="红">
+			<input id="yellow" class="Fil" type="button" name="background" value="黄">
+			<input id="blue" class="Fil" type="button" name="background" value="蓝"><!-- Fil设置按钮透明度 -->
+		</div>
+		<div class="w-h"><!-- w-h选择宽高 -->
+			请选择宽(px):
+			<input id="width200" type="button" name="width" value="200">
+			<input id="width300" type="button" name="width" value="300">
+			<input id="width400" type="button" name="width" value="400">
+		</div>
+		<div class="w-h">
+		请选择高(px):
+		<input id="heigh200" type="button" name="heigt" value="200">
+		<input id="heigh300" type="button" name="heigt" value="300">
+		<input id="heigh400" type="button" name="heigt" value="400">
+		</div>
+		<div>
+			<input id="reset" class="set" type="button" name="reset" value="恢复">
+
+			<input id="sure" class="set" type="button" name="set" value="确定">
+		</div>
+	</div>
+	
+</body>
+</html>
