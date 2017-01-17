@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<script type="text/javascript">
+		window.onload=function(){
+		    if(!document.getElementById) return false;
+			var set = document.getElementById("set");
+			var pic = document.getElementById("pic");
+			var cho = document.getElementById("choice");
+			var red = document.getElementById("red");
+			var yellow = document.getElementById("yellow");
+			var blue = document.getElementById("blue");
+			var w200 = document.getElementById("w200");
+			var w300 = document.getElementById("w300");
+			var w400 = document.getElementById("w400");
+			var h200 = document.getElementById("h200");
+			var h300 = document.getElementById("h300");
+			var h400 = document.getElementById("h400");
+			var rec = document.getElementById("rec");
+			var sure = document.getElementById("sure");
+			set.onclick=function(){
+				cho.style.display="block";
+			}
+			red.onclick=function(){
+				pic.style.backgroundColor="red";
+			}
+			yellow.onclick=function(){
+				pic.style.backgroundColor="yellow";
+			}
+			blue.onclick=function(){
+				pic.style.backgroundColor="blue";
+			}
+			w200.onclick=function(){
+				pic.style.width="200px";
+			}
+			w300.onclick=function(){
+				pic.style.width="300px";
+			}
+			w400.onclick=function(){
+				pic.style.width="400px";
+			}
+			h200.onclick=function(){
+				pic.style.height="200px";
+			}
+			h300.onclick=function(){
+				pic.style.height="300px";
+			}
+			h400.onclick=function(){
+				pic.style.height="400px";
+			}
+			rec.onclick=function(){
+				pic.style.backgroundColor="#fff";
+				pic.style.width="200px";
+				pic.style.height="200px";
+			}
+			sure.onclick=function(){
+				cho.style.display="none";
+			}
+		}	
+	</script>
+</head>
+<body>
+	<h1 style="float: left;">请为下面的DIV设置样式:</h1>
+	<form>
+		<input id="set" class="sub1" type="button" name="" value="点击设置">
+	</form>
+	<div id="pic"></div>
+	<div id="choice">
+		<div class="choice1">
+			<p style="float: left;">选择背景色：</p>
+			<form>
+				<input type="button" name="" value="红" style="background-color: red;" id="red">
+				<input type="button" name="" value="黄" style="background-color: yellow;" id="yellow">
+				<input type="button" name="" value="蓝" style="background-color: blue;" id="blue">
+			</form>
+		</div>	
+		<div class="choice1">
+			<p style="float: left;">选择宽(px)：</p>
+			<form>
+				<input type="button" name="" value="200" id="w200">
+				<input type="button" name="" value="300" id="w300">
+				<input type="button" name="" value="400" id="w400">
+			</form>
+		</div>	
+		<div class="choice1">
+			<p style="float: left;">选择高(px)：</p>
+			<form>
+				<input type="button" name="" value="200" id="h200">
+				<input type="button" name="" value="300" id="h300">
+				<input type="button" name="" value="400" id="h400">
+			</form>
+		</div>
+		<div class="choice1">	
+			<form class="recover">
+				<input type="button" name="" value="恢复" id="rec">
+				<input type="button" name="" value="确定" id="sure">
+			</form>
+		</div>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.sub1{
+	width: 100px;
+	height: 30px;
+	background-color: red;
+	font-family: "Microsof Yahei";
+	color:#ffffff;
+	font-size: 12px;
+}
+h1{
+	font-family: "黑体";
+}
+#pic{
+	margin-top: 20px;
+	display: block;
+	width: 200px;
+	height: 200px;
+	border: solid 2px #000;
+}
+#choice{
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+	display: none;
+}
+.choice1{
+	line-height: 30px;
+	margin-bottom: 4px;
+}
+#choice input{
+	background-color: grey;
+	width: 30px;
+	height: 30px;
+}
+.recover{
+	width: 80px; 	
+	display: block;
+	margin:0 auto;
+}
