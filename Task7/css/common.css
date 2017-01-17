@@ -1,0 +1,82 @@
+body,div,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+	margin: 0;
+	padding: 0;
+}
+
+input,button{
+	outline:none;
+	border:none;
+}
+body{
+	background: #b3b4b6;
+}
+
+.style{
+	height: 500px;
+	margin: 30px 200px;
+	background: #494b52;
+	padding: 20px;
+	border: 2px solid #fff;
+	position: relative;
+}
+
+.style p{
+	font-size: 26px;
+	font-weight: bold;
+}
+
+#setButton{
+	background: #e7504d;
+	color: #fff;
+	height:45px;
+	width: 100px;
+}
+
+#box{
+	width: 100px;
+	height: 100px;
+	background: #fff ;
+	border: 4px solid black;
+}
+
+.choose{
+	position: absolute;
+	left: 300px;top: 150px;
+	background: #aaa3a3;
+	padding: 20px;
+}
+
+.white{
+	background: #fff;
+	padding: 20px;
+}
+.choose p {
+	font-size: 21px;
+	font-weight: normal;
+	line-height: 50px;
+}
+
+.choose input{
+	height: 40px;
+	width: 40px;
+}
+
+#setColorOne,#setColorTwo,#setColorThree{
+	color: #b8aaaa
+	
+}
+
+#setColorOne{
+	background: #77f312;
+}
+#setColorTwo{
+	background: #f88407;
+}
+#setColorThree{
+	background: #68bff7;
+}
+#recovery,#determine{
+	color: #fff;
+	width: 80px;
+	background: #0d084e;
+}
