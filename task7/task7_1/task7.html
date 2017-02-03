@@ -20,6 +20,9 @@
 		var oHeig400=document.getElementById('heigh400');
 		var oReset=document.getElementById('reset');
 		var oSure=document.getElementById('sure');
+		var aSetFil1=document.getElementById('WidHei');
+		var aSetFil2=oSetFil1.getelementsByTagName('input');
+		alert(aSetFil2.length);
 		oSetbutton.onclick=function (){
 			oSetstyle.style.display='block';
 		};
@@ -59,10 +62,10 @@
 		oWidth200.onclick=function(){
 			oDiv.style.width='200px';
 		};
-		oWidth200.onmouseover=function(){
-			oWidth200.style.background='#e8b570';
-			oWidth200.style.filter='alpha(opacity:100)';
-			oWidth200.style.opacity=1;
+		oSetFil2.onmouseover=function(){
+			oSetFil2.style.background='#e8b570';
+			oSetFil2.style.filter='alpha(opacity:100)';
+			oSetFil2.style.opacity=1;
 		};
 		oWidth200.onmouseout=function(){
 			oWidth200.style.background='#efefef';
@@ -161,13 +164,13 @@
 			<input id="yellow" class="Fil" type="button" name="background" value="黄">
 			<input id="blue" class="Fil" type="button" name="background" value="蓝"><!-- Fil设置按钮透明度 -->
 		</div>
-		<div class="w-h"><!-- w-h选择宽高 -->
+		<div id="WidHei"><!-- w-h选择宽高 -->
 			请选择宽(px):
 			<input id="width200" type="button" name="width" value="200">
 			<input id="width300" type="button" name="width" value="300">
 			<input id="width400" type="button" name="width" value="400">
 		</div>
-		<div class="w-h">
+		<div id="WidHei">
 		请选择高(px):
 		<input id="heigh200" type="button" name="heigt" value="200">
 		<input id="heigh300" type="button" name="heigt" value="300">

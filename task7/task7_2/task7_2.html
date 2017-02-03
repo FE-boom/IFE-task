@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>task8</title>
+	<style type="text/css">
+		body,img,span,div,a{
+		padding: 0px;
+		margin: 0px;
+	}
+	#content{
+		position:relative;
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		top: 82px;
+	}
+	#picture{
+		width: 400px;
+		height: 400px;
+		border: 10px solid #c6c6c6;
+	}
+	#content a:hover{
+		filter: alpha(opacity:50);
+		opacity: 0.5;
+	}
+	#SwitchhhingMode{
+		font-size: 15px;
+		position: absolute;
+		top: -27px;
+		left: 58px;
+		text-align: center;
+	}
+	#previous,#next{
+		text-decoration: none;
+		color: #313939;
+		width: 40px;
+		height: 40px;
+		background: #decec6;
+		position: absolute;
+		text-align: center;
+		line-height: 40px;
+		font-size: 30px;
+		font-weight: bold;
+		top: 190px;
+		filter: alpha(opacity:70);
+		opacity: 0.7;
+	
+	}
+	#previous{
+		left: 20px;
+	}
+	#next{
+		right: 0px;
+	}
+	#sort,#describe{
+		filter: alpha(opacity:80);
+		opacity: 0.8;
+		position: absolute;
+		width: 400px;
+		height: 25px;
+		background: #000;
+		color: #d6cee7;
+		text-align: center;
+		left: 10px;
+	}
+	#sort{
+		top: 10px;
+	}
+	#describe{
+		bottom: -10px;
+	}
+	#SwitchButton{
+		position: absolute;
+		top: -60px;
+		left: 50%;
+		margin-left:-70px;
+	}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="SwitchButton">
+			<input id="loop" type="button" name="loop" value="循环切换">
+			<input id="order" type="button" name="order" value="顺序切换">
+		</div>
+		<span id="SwitchhhingMode"></span>
+		<img id="picture" src="">
+		<a id="previous" href="javascript:;"><</a>
+		<a id="next" href="javascript:;">></a>
+		<span id="sort"></span>
+		<span id="describe"></span>
+	</div>
+	<script type="text/javascript">
+		var oPrevious=document.getElementById('previous');
+		var oNext=document.getElementById('next');
+		var oSort=document.getElementById('sort');
+		var oDescribe=document.getElementById('describe');
+		var oPicture=document.getElementById('picture');
+		var arrPictureURL=['pic/1.jpg','pic/2.jpg','pic/3.jpg','pic/4.jpg'];
+		var arrPictureDescribe=['文字一','文字二','文字三','文字四'];
+		var oLoop=document.getElementById('loop');
+		var oOrder=document.getElementById('order');
+		var oSwitchhhingMode=document.getElementById('SwitchhhingMode');
+		var i=0;
+		function PicTab(){
+			oPicture.src=arrPictureURL[i];
+			oSort.innerHTML=i+1+'/'+arrPictureURL.length;
+			oDescribe.innerHTML=arrPictureDescribe[i];
+		};
+		PicTab();
+		oLoop.onclick=function(){
+			SwitchhhingMode.innerHTML='图片可以从最后一张跳转到第一张循环切换';
+			oNext.onclick=function(){
+				i++;
+				PicTab();
+				if (i>arrPictureURL.length-1) {
+				i=0;
+				PicTab();
+				};
+			};
+			oPrevious.onclick=function(){
+				i--;
+				PicTab();
+				if (i<0) {
+				i=arrPictureURL.length-1;
+				PicTab();
+				};
+			};
+		};
+		oOrder.onclick=function(){
+			SwitchhhingMode.innerHTML='图片只能到最后一张或只能到第一张切换';
+			oNext.onclick=function(){
+				i++;
+				PicTab();
+				if (i>arrPictureURL.length-1) {
+				i=3;
+				PicTab();
+				};
+			};
+			oPrevious.onclick=function(){
+				i--;
+				PicTab();
+				if (i<0) {
+				i=0;
+				PicTab();
+				};
+			};
+		};
+	</script>
+</body>
+</html>
