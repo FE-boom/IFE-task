@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>100li</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		li,ul{
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border:1px solid black;
+			margin:4px 4px;
+		}
+		body{
+			width: 400px;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<input id="bt" type="button" name="" value="生成100个li">
+	<ul>
+		
+	</ul>
+</body>
+<script type="text/javascript">
+	function addloadEvent(func){
+	var oldonload = window.onload;
+	if(typeof window.onload != "function"){
+		window.onload = func;
+	}else{
+		window.onload = function(){
+			onload();
+			func();
+		}
+	}
+}
+addloadEvent(click);
+function createLi(){
+	var parent = document.getElementsByTagName("ul")[0];
+	for(var i = 0; i < 100;i++){
+		switch(i % 4){
+			case 0:
+				var li0 = document.createElement("li");
+				li0.style.backgroundColor = "red";
+				parent.appendChild(li0);
+				li0.innerHTML = i;
+				break;
+			case 1:
+				var li1 = document.createElement("li");
+				li1.style.backgroundColor = "yellow";
+				parent.appendChild(li1);
+				li1.innerHTML = i;
+				break;
+			case 2:
+				var li2 = document.createElement("li");
+				li2.style.backgroundColor = "blue";
+				parent.appendChild(li2);
+				li2.innerHTML = i;
+				break;
+			case 3:
+				var li3 = document.createElement("li");
+				li3.style.backgroundColor = "green";
+				parent.appendChild(li3);
+				li3.innerHTML = i;
+				break;	
+		}
+	}
+}
+// var bt = document.getElementById("bt");
+// bt.onclick = createLi;
+function click(){
+	var count=0;
+	var bt = document.getElementById("bt");
+	// bt.onclick = createLi;
+	bt.onclick=function(){
+		count++;
+		if(count == 1){
+			createLi();
+		}else{
+			return false;
+		}
+		return false;
+	}
+}
+	
+</script>
+</html>

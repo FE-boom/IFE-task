@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task8_1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul{
+			width: 500px;
+			height:500px;
+			margin:0;
+			padding:0; 
+		}
+		li{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			list-style: none;
+			line-height: 100px;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<input id="bt" type="button" name="" value="按钮">
+	<ul></ul>
+</body>
+<script type="text/javascript">
+	function addLoadEvent(func){
+	var oldonload = window.onload;
+	if(typeof window.onload != "function"){
+		window.onload = func;
+	}else{
+		window.onload = function(){
+			onload();
+			func();
+		}
+	}
+}
+addLoadEvent(countn);
+function countn(){
+	var bt = document.getElementById("bt");
+	var count = 0;
+	bt.onclick = function(){
+		count++;
+		switch(count % 4){
+		case 1:
+			clean();
+			count1();
+			break;
+		case 2:
+			clean();
+			count2();
+			break;
+		case 3:
+			clean();
+			count3();
+			break;
+		case 0:
+			clean();
+			count4();
+			break;
+		default:
+			return false;
+	}
+	}
+	
+}
+
+function count1(){
+	var parent = document.getElementsByTagName("ul")[0];
+			
+			for(var i = 0;i < 5;i++){
+				switch(i){
+					case 0:
+						var li0 = document.createElement("li");
+						parent.appendChild(li0);
+						li0.style.marginLeft="200px";
+						li0.style.marginRight="200px";
+						li0.style.backgroundColor="blue";
+						li0.innerHTML=2;
+						break;
+					case 1:
+						var li1= document.createElement("li");
+						parent.appendChild(li1);
+						li1.style.marginLeft="100px";
+						li1.style.marginRight="100px";
+						li1.style.backgroundColor="blue";
+						li1.innerHTML=1;
+						break;
+					case 2:
+						var li2= document.createElement("li");
+						parent.appendChild(li2);
+						// li2.style.marginLeft="100px";
+						li2.style.marginRight="100px";
+						li2.style.backgroundColor="blue";
+						li2.innerHTML=3;
+						break;
+					case 3:
+						var li3= document.createElement("li");
+						parent.appendChild(li3);
+						li3.style.marginLeft="0px";
+						// li3.style.marginRight="100px";
+						li3.style.marginRight="300px";
+						li3.style.backgroundColor="blue";
+						li3.innerHTML=0;
+						break;					
+					case 4:
+						var li4= document.createElement("li");
+						parent.appendChild(li4);
+						// li4.style.marginLeft="100px";
+						// li4.style.marginRight="100px";
+						li4.style.backgroundColor="blue";
+						li4.innerHTML=4;
+						break;
+				}
+			}
+}
+function count2(){
+
+		var parent = document.getElementsByTagName("ul")[0];
+			
+			for(var i = 0;i < 5;i++){
+				switch(i){
+					case 0:
+						var li0 = document.createElement("li");
+						parent.appendChild(li0);
+						// li0.style.marginLeft="200px";
+						// li0.style.marginRight="";
+						li0.style.backgroundColor="blue";
+						li0.innerHTML=0;
+						break;
+					case 1:
+						var li1= document.createElement("li");
+						parent.appendChild(li1);
+						li1.style.marginLeft="100px";
+						li1.style.marginRight="300px";
+						li1.style.backgroundColor="blue";
+						li1.innerHTML=1;
+						break;
+					case 2:
+						var li2= document.createElement("li");
+						parent.appendChild(li2);
+						li2.style.marginLeft="200px";
+						// li2.style.marginRight="100px";
+						li2.style.backgroundColor="blue";
+						li2.innerHTML=2;
+						break;
+					case 3:
+						var li3= document.createElement("li");
+						parent.appendChild(li3);
+						li3.style.marginLeft="100px";
+						li3.style.marginRight="300px";
+						li3.style.backgroundColor="blue";
+						li3.innerHTML=3;
+						break;					
+					case 4:
+						var li4= document.createElement("li");
+						parent.appendChild(li4);
+						li4.style.marginLeft="0px";
+						// li4.style.marginRight="100px";
+						li4.style.backgroundColor="blue";
+						li4.innerHTML=4;
+						break;
+				}
+			}	
+}
+function count3(){
+	var parent = document.getElementsByTagName("ul")[0];
+	for(var i = 0;i < 5;i++){
+				switch(i){
+					case 0:
+						var li0 = document.createElement("li");
+						parent.appendChild(li0);
+						// li0.style.marginLeft="200px";
+						// li0.style.marginRight="";
+						li0.style.backgroundColor="blue";
+						li0.innerHTML=0;
+						break;
+					case 1:
+						var li1= document.createElement("li");
+						parent.appendChild(li1);
+						li1.style.marginLeft="300px";
+						// li1.style.marginRight="300px";
+						li1.style.backgroundColor="blue";
+						li1.innerHTML=4;
+						break;
+					case 2:
+						var li2= document.createElement("li");
+						parent.appendChild(li2);
+						li2.style.marginLeft="100px";
+						// li2.style.marginRight="100px";
+						li2.style.backgroundColor="blue";
+						li2.innerHTML=1;
+						break;
+					case 3:
+						var li3= document.createElement("li");
+						parent.appendChild(li3);
+						li3.style.marginLeft="100px";
+						// li3.style.marginRight="300px";
+						li3.style.backgroundColor="blue";
+						li3.innerHTML=4;
+						break;					
+					case 4:
+						var li4= document.createElement("li");
+						parent.appendChild(li4);
+						li4.style.marginLeft="200px";
+						// li4.style.marginRight="100px";
+						li4.style.backgroundColor="blue";
+						li4.innerHTML=3;
+						break;
+				}
+			}
+}
+
+function count4(){
+	var parent = document.getElementsByTagName("ul")[0];
+			
+		for(var i = 0;i < 5;i++){
+			switch(i){
+				case 0:
+				var li0 = document.createElement("li");
+				parent.appendChild(li0);
+				li0.style.marginLeft="200px";
+				// li0.style.marginRight="";
+				li0.style.backgroundColor="blue";
+				li0.innerHTML=0;
+				break;
+			case 1:
+				var li1= document.createElement("li");
+				parent.appendChild(li1);
+				li1.style.marginLeft="100px";
+				li1.style.marginRight="300px";
+				li1.style.backgroundColor="blue";
+				li1.innerHTML=1;
+				break;
+			case 2:
+				var li2= document.createElement("li");
+				parent.appendChild(li2);
+				li2.style.marginLeft="0px";
+				// li2.style.marginRight="100px";
+				li2.style.backgroundColor="blue";
+				li2.innerHTML=2;
+				break;
+			case 3:
+				var li3= document.createElement("li");
+				parent.appendChild(li3);
+				li3.style.marginLeft="100px";
+				li3.style.marginRight="300px";
+				li3.style.backgroundColor="blue";
+				li3.innerHTML=3;
+				break;					
+			case 4:
+				var li4= document.createElement("li");
+				parent.appendChild(li4);
+				li4.style.marginLeft="200px";
+				li4.style.marginRight="200px";
+				li4.style.backgroundColor="blue";
+				li4.innerHTML=4;
+				break;
+		}
+	}
+}
+function clean(){
+	var parent = document.getElementsByTagName("ul")[0];
+	parent.innerHTML = "";		
+	}	
+</script>
+</html>
