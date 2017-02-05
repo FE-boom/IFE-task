@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="task8.css"> -->
+	<style type="text/css">
+		body{
+	margin: 0 auto;
+	width: 500px;
+	height: 600px;
+}
+form{
+	width: 148px;
+	margin: 0 auto;
+}
+img{
+	position: absolute;
+	border:4px solid grey;
+	width: 492px;
+	height: 492px;
+	z-index: 1;
+}
+div{
+	position: relative;
+	height: 500px;
+	width: 500px;
+}
+.top,.buttom,.fl,.fr{
+	position: absolute;
+	z-index: 2;
+}
+.top{
+	position: absolute;
+	top:0;
+	text-align: center;
+	color: white;
+}
+p{
+	background-color: black;
+	opacity: 0.5;
+	width: 500px;
+	margin:0;
+	line-height: 26px;
+}
+.buttom{
+	position: absolute;
+	bottom:0;
+	text-align: center;
+	color: white;
+}
+.fl{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 6px;
+	top:50%;
+
+}
+.fr{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 6px;
+	top:50%;
+}
+.insert{
+	background-color: white;
+	text-align: center;
+}
+	</style>
+	<title>task8</title>
+</head>
+<body>
+	<form>
+		<input id="lop" type="button" name="" value="循环切换">
+		<input id="odr" type="button" name="" value="顺序切换">
+	</form>
+	<p class="insert">插入的话</p>
+	<div>
+		<p class="top">1/4</p>
+		<p class="buttom">文字一</p>
+		<input id="bl" class="fl" type="button" name="" value="">
+		<input id="br" class="fr" type="button" name="" value="">
+		<img id="pic" src="image/1.jpg" alt="1">
+	</div>
+	<script type="text/javascript"<!--  src="task8.js" -->>
+		function addLoadEvent(func){
+	var oldonload = window.onload;
+	if(typeof window.onload != "function"){
+		window.onload = func;
+	}else{
+		window.onload = function(){
+			onload();
+			func();
+		}
+	}
+}
+addLoadEvent(doIt);
+function loop(){
+		var bl = document.getElementById("bl");
+		var br = document.getElementById("br");
+		var lop = document.getElementById("lop");
+		var odr = document.getElementById("odr");
+		var pic = document.getElementById("pic");
+		var p1 = document.getElementsByClassName("insert")[0];
+		var p2 = document.getElementsByClassName("top")[0];
+		var p3 = document.getElementsByClassName("buttom")[0];
+		p1.innerHTML = "图片可以从最后一张跳到第一张循环切换";
+		bl.onclick = function(){
+			var i = pic.getAttribute("alt");
+			var x;
+			if(i==1){
+				x=4;
+				pic.setAttribute("src","image/"+x+".jpg");
+				pic.setAttribute("alt",x);
+				p2.innerHTML = x+"/4";
+			}
+		    else{
+				x=i;
+				x--;
+				p2.innerHTML = x+"/4";
+				pic.setAttribute("src","image/"+x+".jpg");
+				pic.setAttribute("alt",x);
+			}
+		};
+	br.onclick = function(){
+		var i = pic.getAttribute("alt");
+		var x;
+		alert(i);
+		if(i==4){
+			x=1;
+			p2.innerHTML = x+"/4";
+			pic.setAttribute("src","image/"+x+".jpg");
+			pic.setAttribute("alt",x);
+		}
+	    else{
+			x=i;
+			x++;
+			p2.innerHTML = x+"/4";
+			pic.setAttribute("src","image/"+x+".jpg");
+			pic.setAttribute("alt",x);
+		}
+		return false;
+	};
+}
+function order(){
+	var bl = document.getElementById("bl");
+		var br = document.getElementById("br");
+		var lop = document.getElementById("lop");
+		var odr = document.getElementById("odr");
+		var pic = document.getElementById("pic");
+		var p1 = document.getElementsByClassName("insert")[0];
+		var p2 = document.getElementsByClassName("top")[0];
+		var p3 = document.getElementsByClassName("buttom")[0];
+		p1.innerHTML = "图片不可以从最后一张跳到第一张循环切换";
+		bl.onclick = function(){
+			var i = pic.getAttribute("alt");
+			var x;
+			if(i==1){
+				alert("first picture")
+				p2.innerHTML = "1/4";
+			}
+		    else{
+				x=i;
+				x--;
+				p2.innerHTML = x+"/4";
+				pic.setAttribute("src","image/"+x+".jpg");
+				pic.setAttribute("alt",x);
+			}
+		};
+		br.onclick = function(){
+			var i = pic.getAttribute("alt");
+			var x;
+			if(i==4){
+				alert("last picture")
+				p2.innerHTML ="4/4";
+			}
+	   	 else{
+				x=i;
+				x++;
+				p2.innerHTML = x+"/4";
+				pic.setAttribute("src","image/"+x+".jpg");
+				pic.setAttribute("alt",x);
+			}
+		return false;
+	};
+}
+function doIt(){
+		var lop = document.getElementById("lop");
+		var odr = document.getElementById("odr");
+		lop.onclick = loop;
+		odr.onclick = order;
+}
+	</script>
+</body>
+</html>
