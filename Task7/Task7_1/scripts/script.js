@@ -28,9 +28,9 @@ function  setStyle(){
 	var setHeightThree=document.getElementById("setHeightThree");
 	var recovery=document.getElementById("recovery");
 	var determine=document.getElementById("determine");
-	zhezhao.style.display="none";
+	setStyleOne.style.display="none";
 	setButton.onclick=function(){
-		zhezhao.style.display="block";
+		setStyleOne.style.display="block";
 	};
 	setColorOne.onmouseover=function(){
 		setColorOne.style.background="red";

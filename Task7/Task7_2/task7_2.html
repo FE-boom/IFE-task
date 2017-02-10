@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task8</title>
+	<style type="text/css">
+	body,div,input,p,a{
+		margin: 0;
+		padding: 0;
+	}
+
+	input,button{
+		outline: none;
+		padding: 0;
+		margin:0;
+	}
+
+	#loop{
+		margin-left: 400px;
+		margin-top: 20px;
+	}
+
+	#order{
+		margin-left: 50px;
+	}
+		
+	#text1{
+		margin-left: 350px;
+	}
+	#img{
+		width: 300px;
+		height: 300px;
+	}
+
+	div{
+		width: 300px;
+		height: 300px;
+		position: relative;
+		left: 350px;
+	}
+
+	span{
+		position: absolute;
+		width: 300px;
+		height: 20px;
+		text-align: center;
+	}
+
+	div p{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 300px;
+		height: 20px;
+		text-align: center;
+		color: #fff;
+	}
+
+	div input{
+		border: none;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 150px;
+		background: white;
+	}
+
+	#back{
+		left: 5px;
+	}
+	#next{
+		right: 5px;
+	}
+	</style>
+	
+</head>
+<body>
+	<input id="loop" type="button" name="" value="循环切换">
+	<input id="order" type="button" name="" value="顺序切换">
+	<p  id="text1">图片可以从最后一张到第一张循环切换</p>
+	<div>
+		<span id="span">1/4</span>
+		<input  id="back" type="button" name="" value="<">
+		<input  id="next" type="button" name="" value=">">
+		<p id="discribe">文字一</p>
+		<img id="img" src="images/1.jpg">
+	</div>
+
+	<script type="text/javascript">
+		var oNext=document.getElementById('next');
+		var oBack=document.getElementById('back');
+		var oImg=document.getElementById('img');
+		var oDiscribe=document.getElementById('discribe');
+		var oSpan=document.getElementById('span');
+		var oLoop=document.getElementById('loop');
+		var oOrder=document.getElementById('order');
+		var oText1=document.getElementById('text1')
+		var aImg=['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg'];
+		var aDiscribe=['文字一','文字二','文字三','文字四'];
+		var i=0;
+		function TextChange(){
+			oImg.src=aImg[i];
+			oDiscribe.innerHTML=aDiscribe[i];
+			oSpan.innerHTML=(i+1)+"/"+aImg.length;
+		}
+		function next1(){
+			i=i+1;
+			if (i>aImg.length-1) {
+				i=0;
+			}
+			TextChange();
+		}
+		function back1(){
+			i=i-1;
+			if (i<0) {
+				i=aImg.length-1;
+			}
+			TextChange();
+		}
+		function next2(){
+			i=i+1;
+			if (i>aImg.length-1) {
+				i=aImg.length-1;
+				alert("已经是最后一张了！");
+			}
+			TextChange();
+		}
+		function back2(){
+			i=i-1;
+			if (i<0) {
+				i=0;
+				alert("已经是第一张了！");
+			}
+			TextChange();
+		}
+
+		oLoop.onclick=function(){
+			oText1.innerHTML="图片可以从最后一张到第一张循环切换";
+			oNext.onclick=next1;
+			oBack.onclick=back1;
+		}
+		oOrder.onclick=function(){
+			oText1.innerHTML="图片只能从第一张到最后一张顺序切换";
+			oNext.onclick=next2;
+			oBack.onclick=back2;
+		}	
+	</script>
+</body>
+</html>
