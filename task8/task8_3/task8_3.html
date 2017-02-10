@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#all{
+			width: 625px;
+			height: 810px;
+			border: 1px solid black;
+			position: relative;	
+		}
+		#menu li{
+			list-style: none;
+			width: 148px;
+			height: 55px;
+			background: #384343;	
+			float: left;
+			margin-right: 20px;
+			font-size: 30px;
+			color: #0c0101;
+			text-align: center;
+			padding-top: 10px;
+		}
+		#picText{
+			position: absolute;
+			right: 54px;
+			top: 80px;
+		}
+		#picText li{
+			list-style: none;
+			width: 100px;
+			height: 50px;
+			background: #384343;
+			margin-top: 20px;
+			font-size: 30px;
+			color: #0c0101;
+			text-align: center;
+			padding-top: 10px;
+		}
+		img{
+			position: absolute;
+			top: 100px;
+			left: 20px;
+			width: 410px;
+			height: 600px;
+
+		}
+		#all .active { background:#FC3; }
+
+	</style>
+</head>
+<body>
+	<div id="all">
+		<ul id="menu">
+		</ul>
+		<div>
+			<img src="">
+		</div>
+		<ul id="picText">
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var oMenu=document.getElementById('menu');
+		var oText=document.getElementById('picText');
+		var oPic=document.getElementsByTagName('img')[0];
+		var aPicSrc1=['1.jpg','2.jpg','3.jpg','4.jpg'];
+		var aPicSrc2=['5.jpg','6.jpg','7.jpg','8.jpg'];
+		var arr1=['男神一','男神二','男神三','男神四'];
+		var arr2=['男神五','男神六','男神七','男神八'];
+		var aLi1=oText.getElementsByTagName('li');
+		var aLi2=oMenu.getElementsByTagName('li');
+		var num=0;
+		var nums=0;
+		var timer=null;
+		var timer1=null;
+		var timer2=null;
+		function autoPlay1(){
+			timer1=setInterval(function(){
+				num++;
+				num=num%arr1.length;
+				Tab1();
+			},1000);
+		}
+		// function autoPlay2(){
+		// 	clearInterval(timer1,1000);
+		// 	timer2=setInterval(function(){
+		// 		num++;
+		// 		num=num%arr1.length;
+		// 		Tab2();
+		// 	},1000);
+		// }
+		autoPlay1();
+		for (var i = 0; i < 2; i++) {
+			oMenu.innerHTML+='<li></li>';
+		}
+		for (var i = 0; i < 4; i++) {
+			oText.innerHTML+='<li></li>';
+		}
+
+		function Tab1(){
+			aLi2[0].innerHTML='一';
+			aLi2[1].style.background='#384343';
+			aLi2[0].style.background='#FC3';
+			function PicTab(){
+				oPic.src=aPicSrc1[num];
+				aLi1[num].innerHTML=arr1[num];
+				for (var i = 0; i < arr1.length; i++) {
+					aLi1[i].className='';
+				}
+				aLi1[num].className='active';
+		}
+
+		PicTab();
+
+		for (var i = 0; i < aPicSrc1.length; i++){
+			aLi1[i].index=i;
+			aLi1[i].onclick=function(){
+			num=this.index;
+			PicTab();
+			}
+		}
+	}
+	// Tab1();
+	function Tab2(){
+		clearInterval(timer1);
+		aLi2[1].innerHTML='二';
+		aLi2[0].style.background='#384343';
+		aLi2[1].style.background='#FC3';
+			function PicTab(){
+				oPic.src=aPicSrc2[num];
+				aLi1[num].innerHTML=arr2[num];
+				for (var i = 0; i < arr2.length; i++) {
+					aLi1[i].className='';
+				}
+				aLi1[num].className='active';
+		}
+
+		PicTab();
+
+		for (var i = 0; i < aPicSrc2.length; i++){
+			aLi1[i].index=i;
+			aLi1[i].onclick=function(){
+			num=this.index;
+			PicTab();
+			}
+		}
+	}
+	// Tab2();
+	</script>	
+</body>
+</html>
