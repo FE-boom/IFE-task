@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task8_2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			border:1px solid green;
+		}
+		ul,li{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 154px;
+			margin: 0 auto;
+			text-align: center;
+			border:1px solid red;
+			position: relative;
+		}
+		li{
+			position: relative;
+			list-style: none;
+			margin-top: 20px;
+			border:1px solid blue;
+			width: 50px;
+			height: 50px;
+			margin-left: 100px;
+			z-index: 1;
+		}
+		img{
+			width: 50px;
+			height: 50px;
+		}
+		.li1{
+			margin-left: 0px;
+			float:left;
+			width: 90px;
+			height: 70px;
+			background-color: red;
+			z-index: 2;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+		<li><img src="pic.jpg"></li>
+	</ul>
+</body>
+<script type="text/javascript">
+	function addLoadEvent(func){
+	var oldonload = window.onload;
+	if(typeof window.onload != "function"){
+		window.onload = func;
+	}else{
+		window.onload = function(){
+			onload();
+			func();
+		}
+	}
+}
+function over(){
+	var imgs = document.getElementsByTagName("img");
+	var ul = document.getElementsByTagName("ul")[0];
+	for(var i = 0;i<imgs.length;i++){
+		imgs[i].onmouseover = function(x){
+			return function(){
+				var items = document.getElementsByTagName("li");
+				var li = document.createElement("li");
+				ul.insertBefore(li,items[x]);
+				li.className = "li1";
+				items[x+1].onmouseout = function(){
+					setTimeout(out,500);
+				}
+			}
+		}(i)
+	}
+}
+function out(){	
+		var id = setTimeout(clean,500);
+		var items = document.getElementsByTagName("li");
+		for(var a = 0;a<items.length;a++){
+			if(items[a].className == 'li1'){
+				items[a].onmouseover = function(){
+					clearTimeout(id);	
+				}
+				items[a].onmouseout = function(){
+					setTimeout(clean,500);
+				}
+			}
+		}
+	
+}
+function clean(){
+	var ul = document.getElementsByTagName("ul")[0];
+	var items = document.getElementsByTagName("li");
+	for(var i = 0;i<items.length;i++){
+		if(items[i].className == "li1"){
+			ul.removeChild(items[i]);
+		}
+	}
+}
+function main(){
+	// var items = document.getElementsByTagName("li");
+	// for(var a=0;a<items.length;a++){
+	// 	items[a].onmouseover = setTimeout(over,500);
+	// }
+	setTimeout(over,500);
+}
+addLoadEvent(main);
+
+</script>
+</html>
