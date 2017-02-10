@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task8_1</title>
+	<style type="text/css">
+	div {
+	    width: 50px;
+	    height: 50px;
+	    position: absolute;
+	    border: 1px solid #000;
+	    text-align: center;
+	    line-height: 50px;
+	}
+	</style>
+</head>
+<body>
+	<input  id="button" type="button" name="" value="自动生成100个li">
+	<script type="text/javascript">
+		var oBtn=document.getElementById('button');
+    	var aColor=['red','yellow','blue','green'];
+    	oBtn.onclick=function(){
+        	for(var i=0;i<100;i++){
+            	document.body.innerHTML+="<div>"+i+"</div>"
+        	}
+        	var oDiv=document.getElementsByTagName('div');
+        	for (var i=0;i<100;i++) {
+            	oDiv[i].style.left=10+60*(i%10)+"px";
+            	oDiv[i].style.top=50+parseInt(i/10)*60+"px";
+            	oDiv[i].style.backgroundColor=aColor[i%aColor.length];
+        	}
+    	}
+	</script>
+</body>
+</html>

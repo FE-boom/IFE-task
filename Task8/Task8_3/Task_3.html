@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task_3</title>
+	<style type="text/css">
+	body,div,p{
+		margin: 0;
+		padding: 0;
+	}
+	.junmp{
+		border: 1px solid ;
+		padding: 20px;
+		width: 700px;
+		margin-left: 300px;
+		margin-top: 50px;
+	}
+	.text{
+		width: 200px;
+		height: 50px;
+		background: #18e7d1;
+		display: inline-block;
+		margin-bottom: 10px;
+		line-height: 50px;
+		text-align: center;
+	}
+	#img{
+		width: 500px;
+		height: 400px;
+	}
+	.picture{
+		width: 700px;
+		height: 400px;
+		position: relative;
+	}
+	.picture ul{
+		list-style: none;
+		position: absolute;
+		right: 10px;
+		top: 0px;
+	}
+
+	.picture li{
+		margin-top: 10px;
+		text-align: center;
+		font-size: 20px;
+		height: 110px;
+		width: 150px;
+		line-height: 100px;
+		background: #666666;
+	}
+	
+	</style>
+</head>
+<body>	
+	<div class="junmp">
+		<p id="text1" class="text">远古圣衣</p>
+		<p id="text2" class="text">圣殿圣衣</p>
+		<div class="picture">
+			<div id="slider">
+				<img id="img" 	src="images/1.jpg">
+				<img src="" id="second">
+				<img src="" id="three">
+				<img src="" id="four">
+				<img src="" id="five">
+				<img src="" id="six">
+			</div>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">	
+	window.onload=function(){
+		i=0;
+		var oTextOne=document.getElementById('text1');
+		var oTextTwo=document.getElementById('text2');
+		var oImg=document.getElementById('img');
+		var oSlider=document.getElementById('slider');
+		var oLi=document.getElementsByTagName('li');
+		oLi[0].style.background='red';
+		time=setInterval('junmp();',5000);
+		for(var num=0;num<oLi.length;num++){
+			oLi[num].onmouseover=function(){
+				turn(this.innerHTML);
+				clearInterval(time);
+			}
+			obj2[num].onmouseout=function(){ 
+     		time = setInterval("junmp();",6000); 
+			}
+		}
+		function jump(){
+			if (i<oLi.length-1){
+				i++;
+			}
+			else{
+				i=0;
+			}
+			oSlider.style.
+		}
+	}
+
+
+	</script>
+</body>
+</html>
