@@ -19,22 +19,22 @@
 	</style>
 </head>
 <body>
-	<input id="button" type="button" name="bt" value="自动生成十个Li">
+	<input id="button" type="button" name="bt" value="自动生成一百个Li">
 	<script type="text/javascript">
-		var oBtn=document.getElementById('button');
+		var oBtn = document.getElementById('button');
 		
-		var arr=['red','yellow','blue','green'];
-		var str='';
-		for(var i=0;i<100;i++){
+		var arr = ['red','yellow','blue','green'];
+		var str = '';
+		for(var i = 0; i < 100; i++){
 		
-		str=str+'<div>'+i+'</div>';
+		str = str+'<div>'+i+'</div>';
 		
 		}
 	
-		oBtn.onclick=function(){
+		oBtn.onclick = function(){
 		
-			document.body.innerHTML+=str;
-				var aDiv=document.getElementsByTagName('div');
+			document.body.innerHTML += str;
+				var aDiv = document.getElementsByTagName('div');
 				for (var i = 0; i < 10; i++) {
 					for (var j = i*10; j<(i+1)*10; j++) {
 						aDiv[j].style.backgroundColor=arr[j%4];
