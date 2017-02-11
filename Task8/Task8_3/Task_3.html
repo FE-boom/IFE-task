@@ -18,11 +18,16 @@
 	.text{
 		width: 200px;
 		height: 50px;
-		background: #18e7d1;
 		display: inline-block;
 		margin-bottom: 10px;
 		line-height: 50px;
 		text-align: center;
+	}
+	#text1{
+		background: green;
+	}
+	#text2{
+		background: #18e7d1;
 	}
 	#img{
 		width: 500px;
@@ -59,47 +64,67 @@
 		<div class="picture">
 			<div id="slider">
 				<img id="img" 	src="images/1.jpg">
-				<img src="" id="second">
-				<img src="" id="three">
-				<img src="" id="four">
-				<img src="" id="five">
-				<img src="" id="six">
 			</div>
 			<ul>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
+				<li>壮志凌云</li>
+				<li>多臂战王</li>
+				<li>绝地武士</li>
 			</ul>
 		</div>
 	</div>
 	<script type="text/javascript">	
-	window.onload=function(){
+	window.onload=function() {
 		i=0;
-		var oTextOne=document.getElementById('text1');
-		var oTextTwo=document.getElementById('text2');
-		var oImg=document.getElementById('img');
-		var oSlider=document.getElementById('slider');
-		var oLi=document.getElementsByTagName('li');
-		oLi[0].style.background='red';
-		time=setInterval('junmp();',5000);
-		for(var num=0;num<oLi.length;num++){
-			oLi[num].onmouseover=function(){
-				turn(this.innerHTML);
-				clearInterval(time);
-			}
-			obj2[num].onmouseout=function(){ 
-     		time = setInterval("junmp();",6000); 
-			}
-		}
-		function jump(){
-			if (i<oLi.length-1){
+		j=0;
+		num=0;
+		var oTextOne = document.getElementById('text1');
+		var oTextTwo = document.getElementById('text2');
+		var oImg = document.getElementById('img');
+		var oSlider = document.getElementById('slider');
+		var oLi = document.getElementsByTagName('li');
+		var aImg=['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg'];
+
+		setInterval(function() {
+			oImg.src=aImg[i];
+			if (i<5) {	
 				i++;
 			}
 			else{
-				i=0;
+				i = 0;	
 			}
-			oSlider.style.
-		}
+		},1000);
+		setInterval(function() {
+			oLi[j].style.background = 'red';
+
+			if (j<2) {
+				j++;
+			}
+			else{
+				j = 0;
+			}
+		},1000);
+		setInterval(function() {
+			if (num = 0) {
+				oTextOne.style.background = 'green';
+				oTextTwo.style.background = '#18e7d1';
+				oLi[0].innerHTML = '壮志凌云';
+				oLi[1].innerHTML = '多臂战王';
+				oLi[2].innerHTML = '绝地武士';
+			}
+			else{
+				oTextOne.style.background = '#18e7d1';
+				oTextTwo.style.background = 'green';
+				oLi[0].innerHTML = '梦境女王';
+				oLi[1].innerHTML = '圣光天使';
+				oLi[2].innerHTML = '齐天大圣';
+			}
+			if (num<1) {
+				num++;
+			}
+			else{
+				num = 0;
+			}
+		},3000);
 	}
 
 
