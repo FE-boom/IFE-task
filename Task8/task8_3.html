@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task8_3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 400px;
+			margin:0 auto;
+
+		}
+		ul,li{
+			margin:0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			border:1px solid red;
+		}
+		.ul1{
+			margin-bottom: 10px;
+		}
+		.ul1 div{
+			width: 100px;
+			height: 20px;
+			display: inline-block;
+		}
+		#mainpic{
+			width: 300px;
+			height: 200px;
+		}
+		.ul2 {
+			float: right;
+		}
+		.ul2 li{
+			width: 60px;
+			height: 50px;
+			margin-top: 10px;
+		}
+		.ul2 li img{
+			width: 60px;
+			height: 50px;
+		}
+		.choose{
+			background-color: #2BD5D5;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="ul1">
+			<div id="menu1">菜单一</div>
+			<div id="menu2">菜单二</div>
+		</ul>	
+		<ul class="ul2">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<img id="mainpic" src="">
+	</div>
+</body>
+<script type="text/javascript">
+	var menu1 = document.getElementById("menu1");
+	var menu2 = document.getElementById("menu2");
+	var items = document.getElementsByTagName("li");
+	var mainpic = document.getElementById("mainpic");
+	var a = 0, b = 0;
+	function menu(){
+		menu1.className = "";
+		menu2.className = "";
+		if (b%2 == 0) {
+			menu1.className = "choose";
+		}else {
+			menu2.className = "choose";
+		}
+	}
+	function picoder(){
+		for(var i = 0; i <items.length; i++){
+			items[i].className = "";
+		}
+		if(a%6 < 3){
+			items[a%6].className = "choose";
+			for(var c = 0; c < 3; c++){
+				items[c].innerHTML = "图片"+c;
+			}
+		}else {
+			items[a%6-3].className = "choose";
+			for(var c = 0; c < 3; c++){
+				items[c].innerHTML = "图片"+(c+3);
+			}
+		}
+		mainpic.setAttribute("src","image/"+(a%6)+".jpg");
+	}
+	setInterval(function(){
+					picoder();
+					if (a%3 == 0) {
+						menu();
+						b++;
+					}
+					a++;
+				},1000)
+
+</script>
+</html>
