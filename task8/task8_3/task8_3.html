@@ -94,7 +94,7 @@
 			}
 			aLi2[sum%aLi2.length].className = 'active';
 			for (var i = 0; i < aLi2.length; i++) {
-				aLi2[i].innerHTML = aText[num%aLi1.length][i]; //aText[0][1~4] aText[1][1~4]
+				aLi2[i].innerHTML = aText[num%aLi1.length][i]; //aText[0][0~3] aText[1][0~3]
 			}
 			oPic.src = aPicSrc[num%aLi1.length][sum%aLi2.length];
 		}

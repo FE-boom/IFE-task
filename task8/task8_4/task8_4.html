@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	ul,li{
+		padding: 0px;
+		margin: 0px;
+	}
+	#nav{
+		width: 500px;
+		height: 30px;
+		background: #1571FA;
+		border-radius: 1px solid #1571FA;
+		border-radius: 10px;
+	}
+	li{
+		float: left;
+		margin-left: 10px;
+		list-style: none;
+		margin-top: 5px;
+	}
+	.clearfix:after{
+		content:  ;
+		display: table;
+		clear: both;
+	}
+	.clearfix{
+		*zoom:1;
+	}
+	#menu{
+		width: 300px;
+		height: 25px;
+		background: #97D8FB;
+		border-radius: 1px solid #97D8FB;
+		border-radius: 10px;
+		margin-top: 10px;
+		display: none;
+	}
+</style>
+<body>
+	<ul id="nav" class="clearfix">
+		<li id="home">首页</li>
+		<li>关于我们</li>
+		<li>作品</li>
+		<li>博客</li>
+	</ul>
+	<ul id="menu" class="clearfix">
+		<li>最近更新</li>
+		<li>活动</li>
+		<li>报名试听</li>
+		<li>学员反馈</li>
+	</ul>
+
+<script type="text/javascript">
+	var oUl = document.getElementById('nav');
+	var oLi = document.getElementById('home');
+	var oMenu = document.getElementById('menu');
+	var aLi2 = oMenu.getElementsByTagName('li');
+	var timer = null;
+	function show() {
+		clearTimeout(timer); //先清除   不然1000ms过后就会先消失 来不及显示
+		oMenu.style.display = 'block';
+	}
+	function hide() {
+		timer = setTimeout(function() {
+			oMenu.style.display = 'none';
+		},1000);
+	}
+	oLi.onclick = show;
+	oLi.onmouseout = hide;
+	oMenu.onmouseout = hide;
+	oMenu.onmouseover = show;
+
+</script>
+</body>
+</html>
