@@ -54,17 +54,6 @@
 	</ul>
 </body>
 <script type="text/javascript">
-	function addLoadEvent(func){
-	var oldonload = window.onload;
-	if(typeof window.onload != "function"){
-		window.onload = func;
-	}else{
-		window.onload = function(){
-			onload();
-			func();
-		}
-	}
-}
 function over(){
 	var imgs = document.getElementsByTagName("img");
 	var ul = document.getElementsByTagName("ul")[0];
@@ -75,27 +64,24 @@ function over(){
 				var li = document.createElement("li");
 				ul.insertBefore(li,items[x]);
 				li.className = "li1";
-				items[x+1].onmouseout = function(){
-					setTimeout(out,500);
-				}
+				items[x+1].onmouseout = out;
 			}
 		}(i)
 	}
 }
 function out(){	
-		var id = setTimeout(clean,500);
-		var items = document.getElementsByTagName("li");
-		for(var a = 0;a<items.length;a++){
-			if(items[a].className == 'li1'){
-				items[a].onmouseover = function(){
-					clearTimeout(id);	
-				}
-				items[a].onmouseout = function(){
-					setTimeout(clean,500);
-				}
+	var id = setTimeout(clean,500);
+	var items = document.getElementsByTagName("li");
+	for(var a = 0;a<items.length;a++){
+		if(items[a].className == 'li1'){
+			items[a].onmouseover = function(){
+				clearTimeout(id);	
+			}
+			items[a].onmouseout = function(){
+				setTimeout(clean,500);
 			}
 		}
-	
+	}	
 }
 function clean(){
 	var ul = document.getElementsByTagName("ul")[0];
@@ -106,14 +92,7 @@ function clean(){
 		}
 	}
 }
-function main(){
-	// var items = document.getElementsByTagName("li");
-	// for(var a=0;a<items.length;a++){
-	// 	items[a].onmouseover = setTimeout(over,500);
-	// }
-	setTimeout(over,500);
-}
-addLoadEvent(main);
+setTimeout(over,500);
 
 </script>
 </html>
