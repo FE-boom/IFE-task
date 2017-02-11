@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task_4</title>
+	<style type="text/css">
+		#div1{
+			float:left;
+			margin-right:10px;
+			width:200px;
+			height:150px;
+			background:red;
+		}
+		#div1 img{
+			width: 200px;
+			height: 150px;
+		}
+		#div2{
+			display:none;
+			float:left;
+			width:200px;
+			height:200px;
+			background:#0F0;
+		}
+		#div2 img{
+			width: 200px;
+			height: 200px;
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<img src="images/1.jpg">
+	</div>
+	<div id="div2">
+		<img src="images/2.jpg">
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+		var oDiv1 = document.getElementById('div1');
+		var oDiv2 = document.getElementById('div2');
+		var time = null ;
+		oDiv2.onmouseover = oDiv1.onmouseover = function() {
+			clearTimeout(time);
+         	oDiv2.style.display = 'block'; 
+		};
+		oDiv2.onmouseout = oDiv1.onmouseout = function() {
+			time = setTimeout(function() {
+				oDiv2.style.display='none';
+		},500);
+		};
+	}
+</script>
+</html>
