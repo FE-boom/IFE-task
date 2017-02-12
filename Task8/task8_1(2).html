@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task8_1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul{
+			width: 1000px;
+			height:1000px;
+			margin:0;
+			padding:0; 
+			position: relative;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<input id="bt" type="button" name="" value="按钮">
+	<ul></ul>
+</body>
+<script type="text/javascript">
+var bt = document.getElementById("bt");
+var items = document.getElementsByTagName("ul")[0];
+var adiv =items.getElementsByTagName("div");
+var onOff=true;
+var num=0;
+bt.onclick=function(){
+if (onOff) {
+	for (var i = 0; i < 5; i++) {
+		items.innerHTML+='<div>'+i+'</div>';
+		}
+		onOff=false;
+	}
+	num=num%4;
+	if(num == 0) {
+		for(var i=0; i<3; i++) {
+			adiv[i].style.left= 10 + (2-i)*100 +"px";
+			adiv[i].style.top = i*100 + "px";
+		}
+		for(var i=3; i<5; i++) {
+			adiv[i].style.left = 10+(i-2)*100+ "px";
+			adiv[i].style.top = i*100 + "px";
+		}
+	}else if(num == 1) {
+		for(var i=0; i<3; i++) {
+			adiv[i].style.left = 10 + i*100 + "px";
+			adiv[i].style.top = (2-i)*100 + "px";
+		}
+		for(var i=3; i<5; i++) {
+			adiv[i].style.left = 10 +i*100+ "px";
+			adiv[i].style.top = (i-2)*100 + "px";
+		}
+	}else if(num == 2) {
+		for(var i=0; i<3; i++) {
+			adiv[i].style.left= 10 + i*100 +"px";
+			adiv[i].style.top = i*100 + "px";
+		}
+		for(var i=3; i<5; i++) {
+			adiv[i].style.left = 10 + (4-i)*100 + "px";
+			adiv[i].style.top = i*100 + "px";
+		}
+	}else if(num == 3) {
+		for(var i=0; i<3; i++) {
+			adiv[i].style.left= 10 + i*100 +"px";
+			adiv[i].style.top = i*100 + "px";
+		}
+		for(var i=3; i<5; i++) {
+			adiv[i].style.left = 10+i*100+ "px";
+			adiv[i].style.top = (4-i)*100 + "px";
+		}
+	}
+		num++;
+}	
+</script>
+</html>
