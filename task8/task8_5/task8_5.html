@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,input,div,ul,li,p{
+			margin: 0px;
+			padding: 0px;
+			font-family: "微软雅黑";
+		}
+		body{
+			background: #eeefe6;
+		}
+		#box{
+			width: 458px;
+			height: auto;
+			font-size: 14px;
+			line-height: 28px;
+			background: #fffffe;
+			position: absolute;
+			top: 40px;
+			left: 215px;
+			padding: 19px;
+		}
+		#menu input{
+			list-style: none;
+			width: 74px;
+			height: 38px;
+			background: #93948b;
+			margin-top: 4px;
+		}
+		#menu{
+			list-style: none;
+			position: absolute;
+			top: 40px;
+			left: 728px;
+		}
+		#MenuHiden{
+			list-style: none;
+			display: none;
+		}
+		#MenuHiden .active{
+			background: #ea2f00;
+		}
+		#ReplaceSerch{
+			width: 459px;
+			height: 119px;
+			background: #e6e6b4;
+			position: relative;
+			top: 432px;
+			left: 413px;
+			display: none;
+		}
+		#Li {
+			position: absolute;
+			top: 19px;
+			left: 39px;	
+		}
+		#Li input{
+			width: 73px;
+			height: 32px;
+			text-align: center;
+			padding-top: 6px;
+			border: none;
+			background: #e6e6b4;
+		}
+		.underline{
+			width: 421px;
+			height: 2px;
+			background: #c58351;
+			position: absolute;
+			top: 55px;
+			left: 19px;
+		}
+		/*.serch{
+			width: 73px;
+			height: 32px;
+			background: #ea2f00;
+		}*/
+		.SerchText{
+			width: 121px;
+			height: 19px;
+			background: #e7e7e6;
+			border: none;
+			position: absolute;
+			top: 70px;
+			left:19px;
+		}
+		.ReplaceText{
+			width: 121px;
+			height: 19px;
+			background: #e7e7e6;
+			border: none;
+			position: absolute;
+			top: 70px;
+			left: 182px;
+		}
+		.SerchBtn{
+			width: 36px;
+			height: 19px;
+			border: none;
+			border-radius: 5px;
+			background: #e7e7e6;
+			position: absolute;
+			top: 70px;
+			left:143px;
+		}
+		.ReplaceBtn{
+			width: 36px;
+			height: 19px;
+			border: none;
+			border-radius: 5px;
+			background: #e7e7e6;
+			position: absolute;
+			top: 70px;
+			left: 303px;
+		}
+		#ReplaceHide{
+			display: none;
+		}
+		#Li .active{
+			/*width: 73px;
+			height: 32px;
+			text-align: center;
+			padding-top: 6px;
+			border: none;*/
+			background: #ea2f00;
+		}
+		span{
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>呼兰河这小城里边，以前住着我的祖父，现在埋着我的祖父。我生的时候，祖父已经六十多岁了，我长到四五岁，祖父就快七十了。我还没有长到二十岁，祖父就七八十岁了。祖父一过了八十，祖父就死了。从前那后花园的主人，而今不见了。老主人死了，小主人逃荒去了。那园里的蝴蝶，蚂蚱，蜻蜒，也许还是年年仍旧，也许现在完全荒凉了。小黄瓜，大倭瓜，也许还是年年地种着，也许现在根本没有了。那早晨的露珠是不是还落在花盆架上，那午间的太阳是不是还照着那大向日葵，那黄昏时候的红霞是不是还会一会工夫会变出来一匹马来，一会工夫会变出来一匹狗来，那么变着。这一些不能想像了。听说有二伯死了。老厨子就是活着年纪也不小了。东邻西舍也都不知怎样了。至于那磨房里的磨倌，至今究竟如何，则完全不晓得了。</p>
+	</div>
+	<ul id="menu">
+		<li><input type="button" name="expand" value="展开"></li>
+		<ul id="MenuHiden">
+		<li><input type="button" name="serch" value="查找"></li>
+		<li><input type="button" name="replace" value="替换"></li>
+		</ul>
+	</ul>
+	<div id="ReplaceSerch">
+		<div id="Li">
+			<input type="button" value="查找">
+			<input type="button" value="替换">
+		</div>
+		<div class="underline"></div>
+		<div id="Text">
+			<input class="SerchText" type="text" name="text">
+			<input class="SerchBtn" type="button" name="Serch" value="查找">
+			<div id="ReplaceHide">
+			<input class="ReplaceText" type="text" name="replaceText">
+			<input class="ReplaceBtn" type="button" name="replaceBtn" value="替换">
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var oP = document.getElementById('box');
+		var oMenu = document.getElementById('menu');
+		var oMenuHiden = document.getElementById('MenuHiden'); 
+		var aMenuBtn = oMenuHiden.getElementsByTagName('input');
+		var oSerReBtn = document.getElementById('ReplaceSerch');
+		var oP = document.getElementsByTagName('p')[0];
+		var aInput = oSerReBtn.getElementsByTagName('input'); 
+		var oReplaceHide = document.getElementById('ReplaceHide');
+		var oLi1 = document.getElementById('Li');
+		var aLi = oLi1.getElementsByTagName('input');
+		var oText = document.getElementById('Text');
+		var aReSer = oText.getElementsByTagName('input');
+		var num = 0;
+		var b = 0;	
+		oMenu.onclick = function() {
+			oMenuHiden.style.display = 'block';
+		}
+		for (var j = 0; j < 2; j++) {
+			aMenuBtn[j].index = j;
+			aMenuBtn[j].onclick = function() {
+				num = this.index;
+				color(aMenuBtn);
+				oSerReBtn.style.display = 'block';
+			}
+		} //设置侧面菜单的展开和颜色变化
+		function color(a) {
+			for (var i = 0; i < a.length; i++) {
+				a[i].className = '';
+			}
+			a[num].className = 'active';
+		} //颜色跟着点击事件变化的函数
+		color(aLi);
+		for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			aLi[i].onclick = function() {
+				oMenuHiden.style.display = 'none';
+				num = this.index;
+				color(aLi);
+				if(num%2==0){
+					oReplaceHide.style.display = 'none';
+				}else{
+					oReplaceHide.style.display = 'block';
+				}
+			}
+		}
+		aReSer[1].onclick = function() {
+			var str = aReSer[0].value;
+			if(!str){
+				return alert('请输入要查找的内容');
+			}
+			oP.innerHTML = oP.innerHTML.split(str).join('<span>' + str + '</span>');
+		}
+		aReSer[3].onclick = function() {
+			var str1 = aReSer[0].value;
+			if(!str1){
+				return alert('请输入要查找的内容');
+			}
+			var ReplaceStr = aReSer[2].value;
+			if(!ReplaceStr){
+				return alert('请输入要替换的文字');
+			}
+			oP.innerHTML = oP.innerHTML.split(str1).join('<span>' + ReplaceStr + '</span>');
+		}
+	</script>
+</body>
+</html>
