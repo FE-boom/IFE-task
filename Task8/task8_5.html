@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task9</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,p,div {
+			padding: 0;
+			margin: 0;
+		}
+		.cleanfix{
+			*zoom:1;
+		}
+		.cleanfix:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		body {
+			background-color: grey;
+		}
+		.blockOne {
+			margin: 0 auto;
+			margin-top: 50px;
+			width: 800px;
+		}
+		p {
+			background-color: white;
+			padding: 20px;
+			font-family: Microsoft YaHei;
+			width: 490px;
+			float: left;
+			line-height: 30px;
+		}
+		form {
+			float: left;
+			margin-left: 20px;
+		}
+		.blockOne input {
+			width: 80px;
+			height: 40px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		.hiden1 {
+			display: none;
+		}
+		.blockTwo {
+			margin: 0 auto;
+			margin-top: 50px;
+			background-color: #FFFF99;
+			width: 500px;
+			height: 100px;
+			display: none;
+		}
+		.clickButton {
+			border-bottom: 2px solid red;
+		}
+		.clickButton input {
+			border:none;
+			background-color: #FFFF99;
+			margin-top: 10px;
+			margin-left: 20px;
+			width: 60px;
+			height: 30px;
+		}
+		.clickButton input:active {
+			background-color: red;
+		}
+		.textArea {
+			margin-top: 6px;
+		}
+		.textReplace {
+			display: none;
+		}
+		.textArea input {
+			margin-left: 10px;
+		}
+		span {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="blockOne">
+		<p>妙味课堂是一直充满温馨并且极富人情味的IT培训团队:2010-2011年，秒味深度关注WEB前端开发领域，为此精心研发出一套灵活而充满趣味的JavaScript课程。2011~2013年，秒味精准研发处最新的HTML5/CSS3课程，并退出远程培训课程解决方案，尝试将线下优良的培训模式移植到远程网络培训中，希望尽最大的努力，将一种快乐愉悦的授课体验，结合HTML/CSS/JS知识点，精准传递给秒味课堂的每一位学学员。</p>
+		<form>
+			<input id="expand" type="button" name="expand" value="展开">
+			<div class="hiden1">
+				<input id="search" type="button" name="search" value="查找">
+				<input id="replace" type="button" name="replace" value="替换">
+			</div>
+		</form>
+	</div>
+	<div class="cleanfix"></div>
+	<div class="blockTwo">
+		<div class="clickButton">
+			<input  type="button" name="search2" value="查找">
+			<input  type="button" name="replace2" value="替换">
+		</div>
+		<div class="textArea">
+			<input  type="text" name="text">
+			<input  type="button" name="" value="查找">
+			<div class="textReplace">
+				<input type="text" name="replace">
+				<input type="button" name="replaceBt" value="替换">
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var expand = document.getElementById("expand");
+	var search = document.getElementById("search");
+	var replace = document.getElementById("replace");
+	var hiden1 = document.getElementsByClassName("hiden1")[0];
+	var blockTwo = document.getElementsByClassName("blockTwo")[0];
+	var textArea = document.getElementsByClassName("textArea")[0];
+	var oBt = textArea.getElementsByTagName("input");
+	var textReplace =textArea.getElementsByClassName("textReplace")[0];
+	var clickButton = document.getElementsByClassName("clickButton")[0];
+	var aBt = clickButton.getElementsByTagName("input");
+	var p1 = document.getElementsByTagName("p")[0];
+	expand.onclick = function() {
+		hiden1.style.display = "block";
+		setTimeout(function() {
+			hiden1.style.display = "none";
+		},2000);
+	}
+	search.onclick = aBt[0].onclick = function() {
+		blockTwo.style.display = "block";
+		textReplace.style.display = "none";
+		 oBt[1].onclick = function() {
+            var str = oBt[0].value;
+            if(!str){
+                return alert('请输入要查找的内容');
+            }
+            p1.innerHTML = p1.innerHTML.split(str).join('<span>' + str + '</span>');
+        }
+	}
+	replace.onclick = aBt[1].onclick = function() {
+		blockTwo.style.display = "block";
+		textReplace.style.display = "block";
+		oBt[1].style.display = "none";
+		oBt[3].onclick = function() {
+            var str1 = oBt[0].value;
+            if(!str1){
+                return alert('请输入要查找的内容');
+            }
+            var ReplaceStr = oBt[2].value;
+            if(!ReplaceStr){
+                return alert('请输入要替换的文字');
+            }
+            p1.innerHTML = p1.innerHTML.split(str1).join('<span>' + ReplaceStr + '</span>');
+        }
+	}
+</script>
+</html>
