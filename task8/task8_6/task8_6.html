@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body,div,textarea,input,ul{
+		padding: 0px;
+		margin: 0px;
+		font-family: '微软雅黑';
+	}
+	#box{
+		width: 1160px;
+		height: 370px;
+		border: 17px solid #c0c0c0;
+		position: relative;
+		left: 81px;
+		top: 65px;
+	}
+	
+	#leftText{
+		width: 438px;
+		height: 319px;
+		border: 2px dashed #000;
+		position: absolute;
+		top: 14px;
+		left: 14px;
+		background: #efefd6;
+		font-size: 17px;
+		line-height: 22px;
+		padding: 10px;
+	}
+	#rightText{
+		width: 438px;
+		height: 319px;
+		border: 2px dashed #000;
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		background: #5eeff7;
+		font-size: 22px;
+		padding: 10px;
+	}
+	#Btn{
+		width: 186px;
+		height: 70px;
+		border: 7px solid #83bffa;
+		background: #fa6200;
+		position: absolute;
+		top: 7px;
+		left: 487px;
+		font-size: 24px;
+		color: #fffce9;
+	}
+	#sort{
+		position: absolute;
+		top: 95px;
+		left: 548px;
+		font-size: 19px;
+	}
+	#bling{
+		
+		list-style: none;
+		position: absolute;
+		top: 144px;
+		left: 513px;
+		display: none;
+	}
+	#bling li{
+		width: 12px;
+		height: 15px;
+		background: #e8a520;
+		float: left;
+		margin-left: 6px;
+	}
+	/*li .active{
+		background: #fffce9;
+	}*/
+</style>
+<body>
+	<div id="box">
+			<textarea id="leftText">呼兰河这小城里边，以前住着我的祖父，现在埋着我的祖父。我生的时候，祖父已经六十多岁了，我长到四五岁，祖父就快七十了。我还没有长到二十岁，祖父就七八十岁了。祖父一过了八十，祖父就死了。从前那后花园的主人，而今不见了。老主人死了，小主人逃荒去了。那园里的蝴蝶，蚂蚱，蜻蜒，也许还是年年仍旧，也许现在完全荒凉了。小黄瓜，大倭瓜，也许还是年年地种着，也许现在根本没有了。</textarea>
+			<div>
+				<input id='Btn' type="button" name="turnRight" value="把文字右移">
+				<span id="sort">0/0</span>
+				<ul id="bling">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div id="rightText"></div>
+	</div>
+
+	<script type="text/javascript">
+		var oLeft = document.getElementById('leftText');
+		var oRigt = document.getElementById('rightText');
+		var oBtn = document.getElementsByTagName('input')[0];
+		var oSpan = document.getElementsByTagName('span')[0];
+		var oUl = document.getElementById('bling');
+		var aLi = oUl.getElementsByTagName('li');
+		var timer = null;
+		var num = 0;
+		var nums = 0;
+		oBtn.onclick=function(){
+			oUl.style.display = 'block';
+			clearInterval(timer);
+			var str = oLeft.value;
+			var strLen = str.length;
+			var arr = [];
+			var strs = '';
+			num = num%2;
+			if(num==0){
+				timer = setInterval(function(){
+					arr = str.split('');
+					strs = str.split('').splice(0,1).join('');
+					arr[0] = '';
+					str = arr.join('');
+					oLeft.value = str;
+					oRigt.innerHTML+=strs;	
+					oSpan.innerHTML = oRigt.innerHTML.length + '/' + strLen;
+					for (var i = 0; i < aLi.length; i++) {
+						aLi[i].style.background = '#e8a520';
+					}
+					aLi[nums%aLi.length].style.background = '#fa6200';
+					nums++;
+				},100);
+			}
+			if(num==1){
+					clearInterval(timer);
+				}
+			num ++;
+		}
+		
+	</script>
+</body>
+</html>
