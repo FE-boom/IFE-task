@@ -1,0 +1,165 @@
+.topMenu{
+	height: 110px;	
+}
+span{
+	color:red;
+	font-size: normal;
+}
+.topMenu img{
+	width: 242px;
+	height: 110px;
+	float: left;
+}
+.topMenu form{
+	position: relative;
+	width: 1280px;
+	height: 110px;
+	float: left;
+}
+#searchInput{
+	border: 2px solid #a9a9a9;
+	border-right:none;
+	width: 1080px;
+	height: 64px;
+	position: absolute;
+	left:0;
+	top:22px;
+}
+#searchButton{
+	width: 200px;
+	height: 68px;
+	position: absolute;
+	left: 1080px;
+	top:22px;
+	background-color: #136aff;
+	font-family: "Microsoft Yahei";
+	color:#ffffff;
+	font-size: 30px;
+}
+
+.lapMenu{
+	width: 1280px;
+	height: 76px;
+	padding-left: 242px;
+	background-color: #f6f6f6;
+}
+.lapMenu li{
+	float: left;
+	width: 108px;
+	height: 72px;
+	border-bottom: 4px solid #f6f6f6;
+}
+.lapMenu li a{
+	display: block;
+	width: 108px;
+	height: 72px;
+	line-height: 72px;
+	text-align: center;
+	color: #535353;
+	font-family: "Microsoft Yahei";
+}
+.lapMenu li a:hover{
+	border-bottom: 4px solid #116eff;
+}
+
+.display{
+	margin-top: 90px;
+	margin-left: 242px;
+	width: 1280px;
+	padding-bottom: 20px;
+}
+.display h1{
+	margin-bottom: 16px;
+}
+.display a h1{
+	line-height: 32px;
+	font-size: 30px;
+	font-family: "Microsoft Yahei";
+	font-weight: normal;
+	text-decoration: underline;
+}
+.pic{
+	float: left;
+	margin-right: 34px;
+	text-align: center;
+}
+.content1{
+	width: 1002px;
+	float: left;
+}
+.content1 p{
+	line-height: 38px;
+	font-family: "Microsoft Yahei";
+	color:#000;
+	font-size: 22px;
+	width: 786px;
+}
+.targetUrl1, .commit1,.outMenu{
+	display: inline-block;
+	height: 36px;
+}
+.targetUrl1 a,.targetUrl1 span{
+	line-height: 36px;
+	color:#00733b;
+	font-family: "Microsoft Yahei";
+}
+.commit1 a{
+	color: #535353;
+	text-decoration: underline;
+	font-family: "Microsoft Yahei";
+}
+.outMenu{
+	position: relative;
+}
+.targetUrl1 ul{
+	display: none;
+	position: absolute;
+	top:36px;
+	left: -16px;
+	width: 70px;
+	height: 110px;
+	box-shadow:0 0 10px rgba(0, 204, 204, .5);  
+}
+.outMenu li{
+	text-align: center;
+	color: #1100cb;
+	font-size: 12px;
+	font-family: "Microsoft Yahei";
+	height: 25px;
+}
+body{
+	margin:0;
+	width: 1522px;
+}
+input{
+	border:none;
+	padding:0;
+
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.cleanfix{
+	*zoom:1;
+}
+.cleanfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+h1,p{
+	margin:0;
+}

@@ -1,0 +1,36 @@
+body{
+	margin:0;
+	width: 1522px;
+}
+input{
+	border:none;
+	padding:0;
+
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.cleanfix{
+	*zoom:1;
+}
+.cleanfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+h1,p{
+	margin:0;
+}
