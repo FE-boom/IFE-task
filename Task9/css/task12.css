@@ -108,6 +108,9 @@ span{
 	text-decoration: underline;
 	font-family: "Microsoft Yahei";
 }
+.commit1 span{
+	color: #000;
+}
 .outMenu{
 	position: relative;
 }
