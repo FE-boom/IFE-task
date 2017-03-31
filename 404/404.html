@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		li{
+			list-style: none;
+		}
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.content{
+			width: 756px;
+			height: 250px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin:-125px 0 0 -378px;
+		}	
+		.content img{
+			float: right;
+		}
+		.explain{
+			margin-left: 14px;
+			float: left;
+		}
+		.explain h1{
+			line-height: 41px;
+			font-family: "Microsoft Yahei";
+			margin-bottom: 30px;
+		}
+		.explain p{
+			line-height: 22px;
+			font-family: "Microsoft Yahei";
+		}
+		.explain li{
+			line-height: 24px;
+			font-family: "Microsoft Yahei";
+		}
+		.explain button{\
+			display: block;
+			margin-top: 10px;
+			outline: none;
+			border:0;
+			width: 80px;
+			height: 40px;
+			border-radius: 2px;
+			background-color: #4a8dfc;
+			color: #fff;
+			font-family: "Microsoft Yahei";
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="explain">
+			<h1>404</h1>
+			<p>问题描述</p>
+			<ul>
+				<li>问题原因自动生成：</li>
+				
+			</ul>
+			<button>返回首页</button>
+		</div>
+		<img src="404/404_bg.png">
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script type="text/javascript">
+	function SearchError(){
+		var search = window.location.search;
+		var arr = new Array();
+		arr = search.length? search.split("&"):[];
+		var name = null;
+		var value = null;
+		var len = arr.length;
+		for(var i = 0; i < len; i++){
+			var arr1 = arr[i].split("=");
+			name = decodeURIComponent(arr1[0]);
+			value = decodeURIComponent(arr1[1]);
+			var $li = $('<li></li>');
+			var $ul = $('ul');
+			$li.text(value);
+			$ul.append($li);	
+		}
+	}
+	SearchError();
+</script>
+<script type="text/javascript">
+	
+</script>
+</html>

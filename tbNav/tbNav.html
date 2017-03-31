@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tb</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,ul,input,button{
+			margin: 0;
+			padding: 0;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.cleanfix{
+			*zoom:1;
+		}
+		.cleanfix:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		li{
+			list-style: none;
+			font-family: "Microsoft Yahei" ,Arial;
+		}
+		ul li{
+			text-align: center;
+		}
+		.content{
+			margin:0 auto;
+			width: 626px;
+			background-color: #98cdfe;
+			height: 200px;
+			position: relative;
+		}
+		.nav{
+			width: 50px;
+			height: 26px;
+			color: #ff5400;
+		}
+		.clicknav{
+			width: 50px;
+			height: 26px;
+			background-color: #ff5400;
+			color:#fff;
+		}
+		.inputSearch{
+			width: 500px;
+			height: 34px;
+			outline: none;
+			border:3px solid #ff5400;
+		}
+		.searchButton{
+			width: 	120px;
+			height: 40px;
+			font-size: 20px;
+			color: #fff;
+			font-family: "Microsoft Yahei",Arial;
+			background-color: #ff5400;
+			outline: none;
+			border:none;
+		}
+		.quickSearch{
+			position: absolute;
+			left:3px;
+			width: 620px;
+			border:1px solid #333;
+			z-index: 100;
+			display: none;
+		}
+		.quickSearch ul li{
+			text-align: left;
+			line-height: 26px;
+		}
+		.delete{
+			position: absolute;
+			right:0;
+			color:#9c9c9c;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" src="../jQuery/jquery-3.2.0.min.js"></script>
+<script type="text/javascript">
+	var $content = $('<div class="content"></div>');
+	var $body = $("body");
+	$body.append($content);
+	var $ul1 = $('<ul></ul>').addClass('cleanfix');
+	var $li1 = $('<li class="fl nav">宝贝</li><li class="fl nav clicknav">天猫</li><li class="fl nav">店铺</li>');
+	$ul1.append($li1);
+	$input1 = $('<input class="inputSearch fl" type="text" name="输入框" value="">');
+	$buutton1 = $('<button class="searchButton" type="submit" name="search">搜索</button>');
+	$div1 = $('<div class="quickSearch"></div>');
+	$ul2 = $('<ul></ul>');
+	$li2 = $('<li ><span>最近浏览</span></li>');
+	$ul2.append($li2);
+	$div1.append($ul2);
+	$content.append($ul1,$input1,$buutton1,$div1);
+
+/*导航栏切换*/
+	$nav = $('.content > ul > li');
+	$(function(){
+		$nav.on('click',function(){
+			$this = $(this);
+			$brother = $this.siblings('li').removeClass('clicknav');
+			$this.addClass('clicknav');
+		})
+	})
+
+/*获取输入值并且保存生成记录*/
+	$searchButton = $('.searchButton');
+	$inputSearch = $('.inputSearch');
+	$quickSearch = $('.quickSearch');
+	$(function(){
+		$searchButton.on('click',function(){
+			$this = $(this);
+			if($inputSearch.val() != ""){
+				var a = $inputSearch.val();
+				localStorage.a = a;
+			}
+	/*生成新的记录*/		
+			$li = $('<li></li>');
+			$span = $('<span></span>');
+			$span.text(localStorage.a);
+			$deleteA = $('<a class="delete" href="javascript:;">删除</a>');
+			$li.append($span,$deleteA);
+			$ul = $('.quickSearch > ul');
+			$ul.append($li);
+		})
+	})
+
+/*弹出历史搜索框*/
+	$inputSearch.on('click',function(){
+		$quickSearch = $('.quickSearch');
+		$quickSearch.show();
+	})
+
+/*删除按钮事件*/
+	$('.quickSearch > ul').on('mouseover','li',function(){
+		$this = $(this);
+		$this.on('click','a',function(envent){
+			envent.stopPropagation();
+			$that = $(this);
+			$that.parent().remove();
+		})
+	})
+
+/*点击后返回到输入框*/
+	$li3 = $('.quickSearch > ul > li');
+	$li3.on('click',function(){
+		$this = $(this);
+		$liSpan = $this.children('span');
+		$inputSearch.val($liSpan.text());
+		$('.quickSearch').hide(500);
+	})	
+
+</script>
+</html>
