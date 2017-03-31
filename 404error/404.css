@@ -1,0 +1,53 @@
+body,div,img {
+	padding: 0px;
+	margin: 0px;
+	font-family: "微软雅黑";
+}
+.clearfix:after{
+	content:  ;
+	display: table;
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+#error-warp {
+	width: 748px;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -125px 0 0 -374px;
+}
+.error-content-warp {
+	float: left;
+}
+.error-img {
+	float: right;
+}
+.error-title {
+	font-size: 29px;
+	line-height: 29px;
+	color: #777;
+}
+span {
+	font-size: 23px;
+	margin-top: 29px;
+	line-height: 23px;
+	margin-bottom: 29px;
+	color: #777;
+}
+p {
+	font-size: 13px;
+	line-height: 13px;
+	margin-top: 11px;
+	color: #777;
+}
+.to-home-btn {
+	width: 81px;
+	height: 32px;
+	background: #3b81f2;
+	border: none;
+	color: #fff;
+	margin-top: 23px;
+}
