@@ -60,7 +60,6 @@
 			<p>问题描述</p>
 			<ul>
 				<li>问题原因自动生成：</li>
-				
 			</ul>
 			<button>返回首页</button>
 		</div>
@@ -69,24 +68,53 @@
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 <script type="text/javascript">
-	function SearchError(){
-		var search = window.location.search;
-		var arr = new Array();
-		arr = search.length? search.split("&"):[];
-		var name = null;
-		var value = null;
-		var len = arr.length;
+	function getinfo(str){
+	if(str = "search"){
+		var info = window.location.search;
+		var infoSearch = (info.length > 0 ? info.slice(1) : ""),
+		args = {},
+		items = infoSearch.length ? infoSearch.split("&") : [],
+		item = null,
+		name = null,
+		len = items.length;
 		for(var i = 0; i < len; i++){
-			var arr1 = arr[i].split("=");
-			name = decodeURIComponent(arr1[0]);
-			value = decodeURIComponent(arr1[1]);
-			var $li = $('<li></li>');
-			var $ul = $('ul');
-			$li.text(value);
-			$ul.append($li);	
+			item = items[i].split("=");
+			name = decodeURIComponent(item[0]);
+			value = decodeURIComponent(item[1]);
+			if(name){
+				args[name] = value;
+			}
 		}
+		return args;
 	}
-	SearchError();
+	else{
+		return info;
+	}
+}
+
+
+// 将获取到的参数对象处理成数组
+var str = "search";
+var arg = getinfo(str);
+var error = new String;
+for(i in arg){
+	error += arg[i] + ",";
+}
+//末尾有个逗号也会被切分出一个字符串
+
+function createQuestion(arr){
+	var arr1Len = arr.length;
+	for(var i = 0; i < arr1Len; i++){
+		var $li = $('<li></li>');
+		var $ul = $('ul');
+		$li.text(arr1[i]);
+		$ul.append($li);
+	}
+}
+//substring()出去末尾的逗号，不然会哟uge空字符出来
+var arr1 = error.substring(0,error.length-1).split(',');
+createQuestion(arr1);
+
 </script>
 <script type="text/javascript">
 	
