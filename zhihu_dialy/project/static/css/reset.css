@@ -1,0 +1,54 @@
+/* 存放公共样式。如清楚默认样式 */
+html,body,div,img,ul,li,h2,p,span,template {
+	padding: 0px;
+	margin: 0px;
+}
+html {
+	font-size: 20px;
+	background: #f3f3f3;
+	font-family: "微软雅黑"；
+}
+li {
+	list-style: none;
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+@media screen and (max-width: 320px) {
+	html {
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 360px) {
+	html {
+		font-size: 22.5px;
+	}
+}
+@media screen and (min-width: 412px) {
+	html {
+		font-size: 25.75px;
+	}
+}
+@media screen and (min-width: 375px) {
+	html {
+		font-size: 23.44px;
+	}
+}
+@media screen and (min-width: 412px) {
+	html {
+		font-size: 25.75px;
+	}
+	#app {
+		width: 412px;
+	}
+}
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 48px;
+	}
+}
