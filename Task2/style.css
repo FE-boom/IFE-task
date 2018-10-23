@@ -1,0 +1,62 @@
+#biaotilan{
+	background:#111;
+}
+.daohang{	
+	float:right;
+	list-style:disc;
+}
+div{
+	border:2px solid transparent;
+	padding:4px;
+	margin:40px;
+	background:#fff;
+}
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #7a7;
+  width:1500px;
+  height:100px;
+}
+
+#demo-table > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #4ca;
+  margin-bottom: .5em;
+}
+#demo-table thead{
+	background-color:#000;
+	border: 1px solid gray;
+	color:#fff;
+}
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: left;
+  padding-right: .5em;
+  height:10px;
+  border: 1px solid gray;
+  _height:200px; 
+min-height:200px 
+}
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+}
+#demo-table tfoot{
+	background-color:gray;
+}
+#celan{
+	text-align:center;
+}
+.button{
+	background:blue;
+}
+body{
+	background:gray;
+}
