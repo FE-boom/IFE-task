@@ -1,0 +1,89 @@
+#logoid>span{
+    display: block;
+    font-family:"Tahoma Bold";
+    font-size: 30px;
+    float: left;
+}
+#logo{
+    border:0px solid #fbfbfb;
+    height:122px;
+    width:1450px;
+}
+.logoCon{
+    border:0px solid rgb(255,0,0);
+    height:122px;
+}
+#logoImg{
+    float:left;
+}
+#logoSea{
+    width:635px;
+    float:left;   
+    margin-top:20px;
+}
+}
+#logoSeaIn{
+    border:0px solid #ebebeb;
+    height:44px;
+    width:35px;
+ 
+}
+#logoSeaInput{
+    widows: 546px;px;
+    height:44px;
+    float:left;
+    border:0px solid #ffffff
+}
+#logoSeaInImg{
+    width:82px;
+    height:44px;
+    float:left;
+}
+button{
+    background-color: rgb(255, 255, 255);
+}
+#logoSeaTxt{
+    border:0px solid rgb(255,0,0);
+    margin-top:10px;
+    font-size:16px;
+}
+#l span{
+    font-size:15px;
+    color:rgb(153,153,153);
+    margin:30px 14px 0px 14px;
+    display:inline;
+    float: left; 
+}
+#r span{
+    font-size:15px;
+    color:rgb(153,153,153);
+    margin:30px 14px 0px 14px;
+    display:inline;
+    float: right; 
+}
+a:link{
+    color:#006620;
+    text-decoration: none;
+}
+.yonghu{
+    display:inline;
+}
+#box2{
+    margin-left: 146px;
+    width: 632px;
+}
+#p1{
+    font-size: 16px;
+   float: left;
+}
+#Js{
+    float: right;
+}
+#p2{
+    font-size: 18px;
+    color: #1a0cab;
+}
+h1{
+    font-size: 14px;
+    color: #1a0cab;
+}
