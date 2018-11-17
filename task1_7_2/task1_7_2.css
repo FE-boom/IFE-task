@@ -1,0 +1,234 @@
+html, body, div, nav, ul, li,i,p{
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+body{
+    width: 1280px;
+    margin: 0 auto;
+}
+.head{
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    width: 1280px;
+}
+#nav {
+	height: 56px;
+	width: 50%;
+	background: #ffffff;
+	float: right;
+}
+#nav ul {
+    height: 56px;
+	margin-left: 46px;
+}
+#nav li {
+	float: left;
+	list-style: none;
+	font-size: 14px;
+	line-height: 31px;
+	margin-right: 45px;	
+}
+.main{
+    width: 100%;
+    float: top;
+}
+.table1 {
+    width: 1280px;
+    height: 690px;
+    background-image: url(./pi.jpg);
+    background-size: 100% 100%;;
+    
+    
+}
+.TimeofNL {
+    position: relative;
+    margin-top: 0px;
+    top: 160px;
+    margin-left: 117px;
+    width: 478px;
+    height: 50px;
+    font-size: 60px;
+    color: #fdfcfa;
+}
+.XinSD {
+    position: relative;
+    margin-top: 0px;
+    top: 195px;
+    margin-left: 125px;
+    width: 295px;
+    height: 52px;
+    font-size: 21px;
+    color: #fdfcfa;
+    line-height: 30px;
+}
+.experience {
+    position: relative;
+    margin-top: 0px;
+    top: 245px;
+    margin-left: 125px;
+    width: 330px;
+    height: 64px;
+    font-size: 22px;
+    color: #fff3ff;
+    background-color: #e8504f;
+    border-width: 0;
+}
+.BIBI {
+    display: inline-block;
+}
+.bi{
+    float: left;
+    line-height: 18px;
+    display: inline;
+    margin: 0  auto;
+    padding: 35px;
+    text-align: center;
+}
+#bi1 {
+    padding-left: 90px;
+}
+.table2 {
+    width: 1280px;
+    height: 360px;
+    background-color: #eeeced
+}
+.table2 img {
+    position: relative;
+    top: 89px;
+    display: block;
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+}
+.table2 p {
+    position: relative;
+    top: 142px;
+    padding-left: 48px;
+    display: block;
+    margin: 0 auto;
+    width: 827px;
+    height: 50px;
+    font-size: 48px;
+    color: #a0a0a0;
+}
+    
+.table3 {
+    width: 1280px;
+    height: 340px;
+    background-image: url(./pi3.jpg);
+    background-size: 100% 100%;;
+}
+.input {
+    position: relative;
+    top: 172px;
+    left: 126px;
+}
+select{
+    margin-right: 24px;
+    width: 236px;
+    height: 35px;
+    z-index: 2;
+    border-width: 0;
+}
+input{
+    width: 236px;
+    height: 35px;
+    z-index: 2;
+    background-color: #bf4e48;
+    border-width: 0;
+}
+.table4 {
+    width: 1280px;
+    height: 604px;
+    background-color: #f8f8f8;
+}
+.table4 .p1,.p3,.p4 {
+    position: relative;
+    top: 103px;
+    margin-right: 36px;
+    margin-top: 0;
+}
+.p1 {
+    margin-left: 149px;
+}
+.p2 {
+    position: relative;
+    margin-right: 36px;
+    top: 155px;
+}
+.txt1 {
+    position: relative;
+    top: 110px;
+    left: 220px;
+    width: 74px;
+    height: 40px;
+    text-align: center;
+}
+.txt2 {
+    position: relative;
+    top: -270px;
+    left: 415px;
+    width: 197px;
+    height: 42px;
+    text-align: center;
+}
+.txt3 {
+    position: relative;
+    top: 25px;
+    left: 720px;
+    width: 98px;
+    height: 40px;
+    text-align: center;
+}
+.txt4 {
+    position: relative;
+    top: -15px;
+    left: 975px;
+    width: 85px;
+    height: 40px;
+    text-align: center;
+}
+.line1 {
+    font-size: 16px;
+    color: #2f2f2f;
+}
+.line2 {
+    font-size: 12px;
+    color: #828282;
+}
+#diff {
+    margin-right: -40px;
+    letter-spacing: 40px;
+}
+.table5-left {
+    float: left;
+    width: 849px;
+    height: 565px;
+    background-image: url(./table5.png);
+    background-size: 100% 100%;
+    border: 1px solid #dae1e7;
+}
+.table5-right {
+    float: right;
+
+}
+.table5-right span {
+    color: #ea4f4d;
+}
+.table5-right .title {
+    font-size: 20px;
+    text-align: center;
+}
+.table5-right .content {
+    width: 288px;
+    height: 104px;
+    font-size: 11px;
+    color: #b0b0b0;
+}
+
+
+.footer{
+    width: 100%
+}
