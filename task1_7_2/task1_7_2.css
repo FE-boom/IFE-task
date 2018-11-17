@@ -1,4 +1,4 @@
-html, body, div, nav, ul, li,i,p{
+html, body, div, nav, ul, li,i,p,input{
     margin: 0;
     padding: 0;
     font-family: "Microsoft Yahei";
@@ -202,8 +202,12 @@ input{
     margin-right: -40px;
     letter-spacing: 40px;
 }
+.table5 {
+    height: 565px;
+}
 .table5-left {
     float: left;
+    display: inline-block;
     width: 849px;
     height: 565px;
     background-image: url(./table5.png);
@@ -212,23 +216,146 @@ input{
 }
 .table5-right {
     float: right;
-
+    width: 429px;
 }
 .table5-right span {
     color: #ea4f4d;
 }
 .table5-right .title {
+    margin: 165px auto 0px;
+    width: 288px;
     font-size: 20px;
     text-align: center;
 }
 .table5-right .content {
+    margin: 30px auto 0px;
     width: 288px;
-    height: 104px;
+    height: 115px;
     font-size: 11px;
     color: #b0b0b0;
+    line-height: 30px;
 }
+.table5-right .more {
+    margin: 50px 38% 0px;
+    width: 103px;
+    height: 31px;
+    font-size: 13px;
+    color: #e4656e;
+    border: 1px solid #e4656e;
+    background-color: #ffffff
+}
+.table6 {
+    position: relative;
+    height: 520px;
+}
+.table6 .left {
+    position: absolute;
+    left: 0px;
+    display: inline-block;
+    background-color: #e8504f;
+    width: 425px;
+    height: 520px;
+}
+.table6 .mid {
+    position: absolute;
+    display: inline-block;
+    background-color: #fff;
+    left: 425px;
+    width: 425px;
+    height: 520px;
+}
+.table6 .right {
+    position: absolute;
+    display: inline-block;
+    left: 850px;
+    width: 430px;
+    height: 520px;
+}
+.left p {
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.mid p {
+    margin: 0 auto;
+    font-size: 20px;
+    color: #e8504f;
+    text-align: center;
+}
+.left .findmore {
+    position: relative;
+    top: 220px;
+    left: 131px;
+    width: 167px;
+    height: 41px;
+    color: #fff;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid #fff;
+}
+.mid .findmore {
+    position: relative;
+    top: 220px;
+    left: 131px;
+    width: 167px;
+    height: 41px;
+    color: #e8504f;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid #e8504f;
+}
+.table6 .line1 {
+    position: relative;
+    top: 173px;
+}
+.table6 .line2 {
+    position: relative;
+    top: 176px;
+}
+.table7 {
+    height: 750px;
+    position: relative;
+}
+.table7 .title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 119px;
+}
+.table7 .content {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 27px;
+    color: #b0b0b0;
+}
+.table7 .txt {
+    margin: 100px 0 0 138px;
+    width: 291px;
+    height: 255px;
+}
+.table7 .XSJtitle {
+    height: 14px;
+    font-size: 14px;
 
-
+}
+.table7 .fee,.protocol {
+    font-size: 11px;
+    color: #a2a0a1;
+    line-height: 22px;
+}
+.table7 .protocol {
+    margin: 27px 0 58px 0;
+}
+.table7 .fee {
+    margin: 27px 0 38px 0;
+}
+.table7 .input {
+    width: 639px;
+    height: 283px;
+    position: absolute;
+    top: 184px;
+    left: 502px;
+}
 .footer{
     width: 100%
 }
